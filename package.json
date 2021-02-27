@@ -50,6 +50,13 @@
       ]
     }
   },
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
