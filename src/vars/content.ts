@@ -1,6 +1,6 @@
 const ctntModeSelectorGen =
-  'Use our suggestions generator to get suggestions for your improv games and use them freely';
+  'Use our suggestions generator and feed your improv games with ideas you could have never imagined';
 const ctntModeSelectorGames =
-  'Select any of our ready-to-play games or design your own improv games';
+  'Choose one of our pre-designed improv games or design your own and start your improv adventure right now';
 
 export { ctntModeSelectorGen, ctntModeSelectorGames };

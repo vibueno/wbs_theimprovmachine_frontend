@@ -30,6 +30,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0 0 1em 0;
   font-family: Nebula-Hollow, sans-serif;
   font-size: 2.5em;
   text-align: center;

@@ -3,14 +3,15 @@ import React, { MouseEventHandler } from 'react';
 import './index.css';
 
 type ButtonProps = {
+  id: string;
   label: string;
   btnStyle: string;
   clickHandler: MouseEventHandler<HTMLButtonElement>;
 };
 
-const Button = ({ label, btnStyle, clickHandler }: ButtonProps) => {
+const Button = ({ id, label, btnStyle, clickHandler }: ButtonProps) => {
   return (
-    <button className={`btn ${btnStyle}`} onClick={clickHandler}>
+    <button id={id} className={`btn ${btnStyle}`} onClick={clickHandler}>
       {label}
     </button>
   );

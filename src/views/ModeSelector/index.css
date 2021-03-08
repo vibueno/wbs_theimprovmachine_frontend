@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Cairo-Regular;
+  src: url(../../fonts/cairo-regular.woff2);
+}
+
 .mode-selector-bg {
   height: 100vh;
   background: url('../../img/modeselector.jpg') no-repeat center center fixed;
@@ -26,20 +31,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2em 2em 2em 2em;
+  padding: 2em 3em 2em 3em;
   border-radius: 5px;
   background-color: rgba(198, 245, 253, 0.3);
   height: 65vh;
   text-align: center;
 }
 
+.selection-container-text {
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+}
+
+.selection-container-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin: 0 0 1em 0;
+  height: 20%;
+}
+
 .text {
   color: #fff;
-  font-size: 3em;
+  font-family: cairo-regular;
+  font-size: 2.5em;
   text-align: center;
 }
 
 .btn-mode-selector {
-  margin: auto;
+  margin: 0 auto;
   width: 9em;
 }

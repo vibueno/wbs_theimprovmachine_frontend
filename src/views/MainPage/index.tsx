@@ -9,7 +9,7 @@ import './index.css';
 
 const MainPage = () => {
   const history = useHistory();
-  const handleOnClick = () => history.push('modeselector');
+  const onClickHandler = () => history.push('modeselector');
 
   changeBackground('main-page-bg');
 
@@ -19,7 +19,12 @@ const MainPage = () => {
         <h1 className="title">The Improv Machine</h1>
         <h2>The future of Improv is now</h2>
         <div className="button-container">
-          <Button label="Enter->>" btnStyle="" clickHandler={handleOnClick} />
+          <Button
+            id="btn-main-page"
+            label="Enter->>"
+            btnStyle=""
+            clickHandler={onClickHandler}
+          />
         </div>
       </div>
     </>
