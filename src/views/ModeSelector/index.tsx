@@ -68,7 +68,7 @@ const ModeSelector = () => {
           <div className="btn-return-container">
             <Button
               id="btn-return"
-              label="<<-Return"
+              label="&larr; Back"
               btnStyle=""
               clickHandler={onClickHandler}
             />

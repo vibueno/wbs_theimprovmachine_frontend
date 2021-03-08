@@ -21,7 +21,7 @@ const MainPage = () => {
         <div className="btn-enter-container">
           <Button
             id="btn-enter"
-            label="Enter->>"
+            label="Enter&#13;&#10;&#13;&#10;&#9166;"
             btnStyle="btn-enter"
             clickHandler={onClickHandler}
           />
