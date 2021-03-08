@@ -36,3 +36,9 @@ h2 {
   text-shadow: 1px 1px 0 #010514;
   color: #cdfafc;
 }
+
+.button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

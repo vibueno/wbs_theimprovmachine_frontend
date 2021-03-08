@@ -1,0 +1,11 @@
+.btn {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #010514;
+  padding: 0px 10px 5px 15px;
+  cursor: pointer;
+  font-family: Nebula-Regular, sans-serif;
+  font-size: 3em;
+  text-align: center;
+  color: #c7f0fb;
+}
