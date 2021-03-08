@@ -1,18 +1,18 @@
 import React from 'react';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
 
-import { startupMessage } from './vars/messages';
-import { fillInStrTemplate } from './utils/strtemplate';
+import MainPage from './views/MainPage';
 
 const App = () => {
-  const message = fillInStrTemplate(startupMessage, [
-    {
-      param: 'appName',
-      value: 'The Improv Machine'
-    }
-  ]);
-
-  return <div className="App">{message}</div>;
+  return (
+    <div className="App">
+      <Switch>
+        <Route path={'/'}>
+          <MainPage />
+        </Route>
+      </Switch>
+    </div>
+  );
 };
 
 export default App;
