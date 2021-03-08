@@ -18,7 +18,7 @@ const MainPage = () => {
       <div className="main-page-bg">
         <h1 className="title">The Improv Machine</h1>
         <h2>The future of Improv is now</h2>
-        <div className="button-container">
+        <div className="btn-enter-container">
           <Button
             id="btn-main-page"
             label="Enter->>"

@@ -14,8 +14,22 @@ const ModeSelector = () => {
   changeBackground('mode-selector-bg');
 
   const onClickHandler = (e: MouseEvent) => {
-    console.log(e.target);
-    history.push('/modeselector');
+    const target = e.target as Element;
+
+    switch (target.id) {
+      case 'btn-mode-generator':
+        history.push('/generator');
+        break;
+
+      case 'btn-return':
+        history.push('/');
+        break;
+      case 'btn-mode-games':
+        history.push('/games');
+
+        break;
+      default:
+    }
   };
   return (
     <>
@@ -50,6 +64,16 @@ const ModeSelector = () => {
                 />
               </div>
             </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="btn-return-container">
+            <Button
+              id="btn-return"
+              label="<<-Return"
+              btnStyle=""
+              clickHandler={onClickHandler}
+            />
           </div>
         </div>
       </div>
