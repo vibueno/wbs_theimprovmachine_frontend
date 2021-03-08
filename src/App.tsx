@@ -1,8 +1,8 @@
-import React from "react";
-import "./App.css";
+import React from 'react';
+import './App.css';
 
-function App() {
+const App = () => {
   return <div className="App">The Improv Machine</div>;
-}
+};
 
 export default App;
