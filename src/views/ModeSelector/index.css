@@ -3,7 +3,7 @@
   src: url(../../fonts/cairo-regular.woff2);
 }
 
-.mode-selector-bg {
+.bg-mode-selector {
   height: 100vh;
   background: url('../../img/modeselector.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -64,9 +64,24 @@
   width: 9em;
 }
 
-.btn-return-container {
+.btn-back {
+  min-width: 45px;
+  min-height: 45px;
+  border-width: 3px;
+  font-size: 1.5em;
+  white-space: normal;
+}
+
+.btn-back-container {
   display: flex;
   margin: -4em 0 4em 0;
   width: 100%;
   justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  .btn-back {
+    border-width: 5px;
+    font-size: 3em;
+  }
 }

@@ -11,7 +11,7 @@ import './index.css';
 
 const ModeSelector = () => {
   const history = useHistory();
-  changeBackground('mode-selector-bg');
+  changeBackground('bg-mode-selector');
 
   const onClickHandler = (e: MouseEvent) => {
     const target = e.target as Element;
@@ -20,7 +20,7 @@ const ModeSelector = () => {
       case 'btn-mode-generator':
         history.push('/generator');
         break;
-      case 'btn-return':
+      case 'btn-back':
         history.push('/');
         break;
       case 'btn-mode-games':
@@ -65,11 +65,11 @@ const ModeSelector = () => {
           </div>
         </div>
         <div className="row">
-          <div className="btn-return-container">
+          <div className="btn-back-container">
             <Button
-              id="btn-return"
-              label="&larr; Back"
-              btnStyle=""
+              id="btn-back"
+              label="Back &larr;"
+              btnStyle="btn-back"
               clickHandler={onClickHandler}
             />
           </div>

@@ -11,7 +11,7 @@ const MainPage = () => {
   const history = useHistory();
   const onClickHandler = () => history.push('modeselector');
 
-  changeBackground('main-page-bg');
+  changeBackground('bg-main-page');
 
   return (
     <>

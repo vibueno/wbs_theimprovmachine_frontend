@@ -3,7 +3,7 @@ Sizes are set for small devices and then
 increased with media queries for bigger screens
  */
 
-.main-page-bg {
+.bg-main-page {
   background: url('../../img/mainpage.jpg') no-repeat center center fixed;
   background-size: cover;
 }
@@ -52,6 +52,7 @@ h2 {
 .btn-enter {
   min-width: 45px;
   min-height: 45px;
+  border-width: 3px;
   font-size: 1.5em;
   white-space: normal;
 }
@@ -80,6 +81,7 @@ h2 {
   }
 
   .btn-enter {
+    border-width: 5px;
     font-size: 3em;
   }
 }
@@ -90,7 +92,7 @@ h2 {
   }
 
   h2 {
-    font-size: 2.5em;
+    font-size: 2.75em;
   }
 
   .btn-enter {
