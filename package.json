@@ -45,6 +45,9 @@
     ],
     "rules": {
       "no-use-before-define": "off",
+      "space-before-function-paren": "off",
+      "curly": "off",
+      "no-template-curly-in-string": "off",
       "semi": [
         2,
         "always"
