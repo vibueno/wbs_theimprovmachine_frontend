@@ -20,13 +20,11 @@ const ModeSelector = () => {
       case 'btn-mode-generator':
         history.push('/generator');
         break;
-
       case 'btn-return':
         history.push('/');
         break;
       case 'btn-mode-games':
         history.push('/games');
-
         break;
       default:
     }

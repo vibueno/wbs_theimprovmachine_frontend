@@ -20,9 +20,9 @@ const MainPage = () => {
         <h2>The future of Improv is now</h2>
         <div className="btn-enter-container">
           <Button
-            id="btn-main-page"
+            id="btn-enter"
             label="Enter->>"
-            btnStyle=""
+            btnStyle="btn-enter"
             clickHandler={onClickHandler}
           />
         </div>

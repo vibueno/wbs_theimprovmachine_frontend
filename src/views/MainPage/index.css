@@ -1,3 +1,8 @@
+/*
+Sizes are set for small devices and then
+increased with media queries for bigger screens
+ */
+
 .main-page-bg {
   background: url('../../img/mainpage.jpg') no-repeat center center fixed;
   background-size: cover;
@@ -17,10 +22,10 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20vh 0 0 0;
+  margin: 25vh 0 5vh 0;
   width: 100%;
   font-family: Nebula-Regular, sans-serif;
-  font-size: 7em;
+  font-size: 2.1em;
   text-align: center;
   text-shadow: -3px 0 #01278a, 0 3px #01278a, 3px 0 #01278a, 0 -3px #8ad4fe;
   color: #fff;
@@ -32,7 +37,7 @@ h2 {
   justify-content: center;
   margin: 0 0 1em 0;
   font-family: Nebula-Hollow, sans-serif;
-  font-size: 2.5em;
+  font-size: 1.5em;
   text-align: center;
   text-shadow: 1px 1px 0 #010514;
   color: #fff;
@@ -42,4 +47,52 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.btn-enter {
+  min-width: 45px;
+  min-height: 45px;
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 400px) {
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .btn-enter {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 5em;
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  .btn-enter {
+    font-size: 3em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 7em;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  .btn-enter {
+    font-size: 3em;
+  }
 }
