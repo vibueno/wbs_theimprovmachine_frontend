@@ -35,39 +35,37 @@ const ModeSelector = () => {
   return (
     <>
       <div className="mode-selector-bg">
-        <div className="row">
-          <div className="column">
-            <div className="selection-container">
-              <div className="selection-container-text">
-                <p className="text">{ctntModeSelectorGen}</p>
+        <main>
+          <div className="cards-container">
+            <section className="card">
+              <div className="card-text-container">
+                <p className="card-text">{ctntModeSelectorGen}</p>
               </div>
-              <div className="selection-container-btn">
+              <div className="card-btn-container">
                 <Button
                   id="btn-mode-generator"
                   label="Generator"
-                  btnStyle="btn-mode-selector"
+                  btnStyle="card-btn"
                   clickHandler={onClickHandler}
                 />
               </div>
-            </div>
-          </div>
-          <div className="column">
-            <div className="selection-container">
-              <div className="selection-container-text">
-                <p className="text">{ctntModeSelectorGames}</p>
+            </section>
+
+            <section className="card">
+              <div className="card-text-container">
+                <p className="card-text">{ctntModeSelectorGames}</p>
               </div>
-              <div className="selection-container-btn">
+              <div className="card-btn-container">
                 <Button
                   id="btn-mode-games"
                   label="Games"
-                  btnStyle="btn-mode-selector"
+                  btnStyle="card-btn"
                   clickHandler={onClickHandler}
                 />
               </div>
-            </div>
+            </section>
           </div>
-        </div>
-        <div className="row">
+
           <div className="btn-back-container">
             <Button
               id="btn-back"
@@ -76,8 +74,9 @@ const ModeSelector = () => {
               clickHandler={onClickHandler}
             />
           </div>
-        </div>
+        </main>
       </div>
+
       <BackToTop />
     </>
   );
