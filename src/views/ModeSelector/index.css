@@ -54,20 +54,23 @@
 
 .text {
   font-size: 2.5em;
-  font-family: cairo-regular;
+  font-family: cairo-regular, sans-serif;
   text-align: center;
   color: #fff;
 }
 
 .btn-mode-selector {
+  opacity: 0.8;
   width: 9em;
   margin: 0 auto;
+  background-color: #030f39;
 }
 
 .btn-back {
   min-width: 45px;
   min-height: 45px;
   border-width: 3px;
+  background-color: #010514;
   font-size: 1.5em;
 }
 
