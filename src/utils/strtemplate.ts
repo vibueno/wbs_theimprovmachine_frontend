@@ -12,7 +12,7 @@ const strTemplateHasParams = (strTemplate: string) => {
 };
 
 /**
- * Returns a message after filling-in the parametrized gaps it contains
+ * @desc Returns a message after filling-in the parametrized gaps it contains
  * @param  {string} strTemplate - Message with params to be filled-in
  * @param  {{ param: string; value: string }[]} strData - Values to be used to fill-in the message
  * @return Filled-in message

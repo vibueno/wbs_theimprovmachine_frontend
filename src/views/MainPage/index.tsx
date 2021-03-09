@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import Button from '../../components/Button';
 
 import { changeBackground } from '../../utils/background';
+
+import { ctntAppTitle, ctntAppSubtitle } from '../../vars/content';
 
 import './index.css';
 
@@ -11,13 +13,15 @@ const MainPage = () => {
   const history = useHistory();
   const onClickHandler = () => history.push('modeselector');
 
-  changeBackground('bg-main-page');
+  useEffect(() => {
+    changeBackground('bg-main-page');
+  }, []);
 
   return (
     <>
       <div className="main-page-bg">
-        <h1 className="title">The Improv Machine</h1>
-        <h2>The future of Improv is now</h2>
+        <h1 className="title">{ctntAppTitle}</h1>
+        <h2>{ctntAppSubtitle}</h2>
         <div className="btn-enter-container">
           <Button
             id="btn-enter"

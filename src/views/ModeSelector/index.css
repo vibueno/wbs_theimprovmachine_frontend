@@ -23,18 +23,18 @@
   align-items: center;
   flex-basis: 100%;
   flex: 1;
-  padding: 0 30px 0 30px;
   height: 100vh;
+  padding: 0 30px 0 30px;
 }
 
 .selection-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2em 3em 2em 3em;
   border-radius: 5px;
-  background-color: rgba(198, 245, 253, 0.3);
   height: 65vh;
+  padding: 2em 3em 2em 3em;
+  background-color: rgba(198, 245, 253, 0.3);
   text-align: center;
 }
 
@@ -48,20 +48,20 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  margin: 0 0 1em 0;
   height: 20%;
+  margin: 0 0 1em 0;
 }
 
 .text {
-  color: #fff;
-  font-family: cairo-regular;
   font-size: 2.5em;
+  font-family: cairo-regular;
   text-align: center;
+  color: #fff;
 }
 
 .btn-mode-selector {
-  margin: 0 auto;
   width: 9em;
+  margin: 0 auto;
 }
 
 .btn-back {
@@ -69,14 +69,13 @@
   min-height: 45px;
   border-width: 3px;
   font-size: 1.5em;
-  white-space: normal;
 }
 
 .btn-back-container {
   display: flex;
-  margin: -4em 0 4em 0;
-  width: 100%;
   justify-content: center;
+  width: 100%;
+  margin: -4em 0 4em 0;
 }
 
 @media screen and (min-width: 600px) {

@@ -1,11 +1,11 @@
 .btn {
-  display: block;
-  background-color: #010514;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   padding: 8px 10px 10px 15px;
+  background-color: #010514;
   cursor: pointer;
-  font-family: Nebula-Regular, sans-serif;
   font-size: 3em;
-  text-align: center;
-  vertical-align: middle;
+  font-family: Nebula-Regular, sans-serif;
   color: #fff;
 }

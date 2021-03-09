@@ -24,8 +24,8 @@ h1 {
   justify-content: center;
   margin: 25vh 0 5vh 0;
   width: 100%;
-  font-family: Nebula-Regular, sans-serif;
   font-size: 2.1em;
+  font-family: Nebula-Regular, sans-serif;
   text-align: center;
   text-shadow: -3px 0 #01278a, 0 3px #01278a, 3px 0 #01278a, 0 -3px #8ad4fe;
   color: #fff;
@@ -36,8 +36,8 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 0 1em 0;
-  font-family: Nebula-Hollow, sans-serif;
   font-size: 1.5em;
+  font-family: Nebula-Hollow, sans-serif;
   text-align: center;
   text-shadow: 1px 1px 0 #010514;
   color: #fff;
@@ -50,11 +50,10 @@ h2 {
 }
 
 .btn-enter {
+  border-width: 3px;
   min-width: 45px;
   min-height: 45px;
-  border-width: 3px;
   font-size: 1.5em;
-  white-space: normal;
 }
 
 @media screen and (min-width: 400px) {

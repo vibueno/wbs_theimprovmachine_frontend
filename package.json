@@ -50,6 +50,7 @@
       "space-before-function-paren": "off",
       "curly": "off",
       "no-template-curly-in-string": "off",
+      "multiline-ternary": "off",
       "semi": [
         2,
         "always"

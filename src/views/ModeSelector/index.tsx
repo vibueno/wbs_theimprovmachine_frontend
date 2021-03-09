@@ -1,17 +1,20 @@
-import React, { MouseEvent } from 'react';
+import React, { MouseEvent, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import Button from '../../components/Button';
+import BackToTop from '../../components/BackToTop';
 
 import { changeBackground } from '../../utils/background';
-
 import { ctntModeSelectorGen, ctntModeSelectorGames } from '../../vars/content';
 
 import './index.css';
 
 const ModeSelector = () => {
+  useEffect(() => {
+    changeBackground('bg-mode-selector');
+  }, []);
+
   const history = useHistory();
-  changeBackground('bg-mode-selector');
 
   const onClickHandler = (e: MouseEvent) => {
     const target = e.target as Element;
@@ -68,13 +71,14 @@ const ModeSelector = () => {
           <div className="btn-back-container">
             <Button
               id="btn-back"
-              label="Back &larr;"
+              label="&#9003; Back"
               btnStyle="btn-back"
               clickHandler={onClickHandler}
             />
           </div>
         </div>
       </div>
+      <BackToTop />
     </>
   );
 };
