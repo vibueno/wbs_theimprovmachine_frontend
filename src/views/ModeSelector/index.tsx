@@ -33,7 +33,7 @@ const ModeSelector = () => {
   };
   return (
     <>
-      <div className="mode-selector-bg">
+      <div className="selector-main-container">
         <div className="selector-container">
           <div className="cards-container">
             <section className="card">

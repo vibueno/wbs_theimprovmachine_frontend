@@ -19,18 +19,16 @@ const MainPage = () => {
 
   return (
     <>
-      <div className="main-page-bg">
-        <div className="cover-container">
-          <h1 className="title">{ctntAppTitle}</h1>
-          <h2>{ctntAppSubtitle}</h2>
-          <div className="btn-enter-container">
-            <Button
-              id="btn-enter"
-              label="Enter&#13;&#10;&#13;&#10;&#9166;"
-              btnStyle="btn-enter"
-              clickHandler={onClickHandler}
-            />
-          </div>
+      <div className="cover-container">
+        <h1 className="title">{ctntAppTitle}</h1>
+        <h2>{ctntAppSubtitle}</h2>
+        <div className="btn-enter-container">
+          <Button
+            id="btn-enter"
+            label="Enter&#13;&#10;&#13;&#10;&#9166;"
+            btnStyle="btn-enter"
+            clickHandler={onClickHandler}
+          />
         </div>
       </div>
     </>

@@ -12,8 +12,15 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 30px 15px;
   color: var(--text);
+}
+
+.App {
+  height: 90vh;
 }
 
 .back-to-top {

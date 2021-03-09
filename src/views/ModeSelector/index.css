@@ -14,12 +14,17 @@ increased with media queries for bigger screens
   background-size: cover;
 }
 
+.selector-main-container {
+  display: grid;
+  justify-content: center;
+  height: 100%;
+}
+
 .selector-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  min-height: 100vh;
+  justify-content: center;
 }
 
 .cards-container {
@@ -41,7 +46,6 @@ increased with media queries for bigger screens
   width: 100%;
   min-width: 200px;
   max-width: 1000px;
-  min-height: 250px;
   padding: 1em;
   background-color: rgba(198, 245, 253, 0.3);
   text-align: center;
@@ -57,6 +61,7 @@ increased with media queries for bigger screens
 .card-btn-container {
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
   height: 20%;
   margin: 0 0 0.5em 0;
 }
@@ -70,6 +75,8 @@ increased with media queries for bigger screens
 .card-btn {
   width: 9em;
   border-width: 3px;
+  min-height: 45px;
+  max-height: 2em;
   margin: 0 auto;
   background-color: var(--btn-color-forth);
   font-size: 1em;
@@ -80,7 +87,7 @@ increased with media queries for bigger screens
   justify-content: center;
   width: 100%;
   padding: 1em;
-  margin: 1em 0 0 0;
+  margin: 0;
 }
 
 .btn-back {
@@ -126,10 +133,6 @@ increased with media queries for bigger screens
 }
 
 @media screen and (min-width: 800px) {
-  .selector-container {
-    justify-content: center;
-  }
-
   .card {
     flex-basis: 30%;
   }
@@ -139,7 +142,7 @@ increased with media queries for bigger screens
   }
 
   .card-btn {
-    font-size: 2.5em;
+    font-size: 2.25em;
   }
 
   .btn-back-container {

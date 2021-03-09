@@ -22,8 +22,9 @@ increased with media queries for bigger screens
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  margin: 0 1.5em;
+  padding: 2em;
+  width: 100%;
+  height: 100%;
 }
 
 h1 {
@@ -31,8 +32,9 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  max-width: 1300px;
   margin: 0 0 0.15em 0;
-  font-size: 2.1em;
+  font-size: 2.25em;
   font-family: Nebula-Regular, sans-serif;
   text-align: center;
   text-shadow: -3px 0 #01278a, 0 3px #01278a, 3px 0 #01278a, 0 -3px #8ad4fe;
@@ -42,8 +44,10 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 0 1em 0;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-family: Nebula-Hollow, sans-serif;
   text-align: center;
   text-shadow: 1px 1px 0 #010514;
@@ -57,10 +61,10 @@ h2 {
 
 .btn-enter {
   border-width: 3px;
-  min-width: 45px;
+  min-width: 130px;
   min-height: 45px;
   background-color: var(--btn-color-forth);
-  font-size: 1.5em;
+  font-size: 1.1em;
 }
 
 @media screen and (min-width: 300px) {
@@ -70,6 +74,20 @@ h2 {
 
   h2 {
     font-size: 1.5em;
+  }
+
+  .btn-enter {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 1.25em;
   }
 
   .btn-enter {
@@ -88,7 +106,7 @@ h2 {
 
   .btn-enter {
     border-width: 5px;
-    font-size: 3em;
+    font-size: 2.5em;
   }
 }
 
