@@ -1,6 +1,6 @@
-const changeBackground = (cssClass: string) => {
+const setBackground = (cssClass: string) => {
   document.body.className = '';
   document.body.classList.add(cssClass);
 };
 
-export { changeBackground };
+export { setBackground };

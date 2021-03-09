@@ -3,14 +3,14 @@ import { useHistory } from 'react-router-dom';
 
 import Button from '../../components/Button';
 
-import { changeBackground } from '../../utils/background';
+import { setBackground } from '../../utils/background';
 import { ctntModeSelectorGen, ctntModeSelectorGames } from '../../vars/content';
 
 import './index.css';
 
 const ModeSelector = () => {
   useEffect(() => {
-    changeBackground('bg-mode-selector');
+    setBackground('bg-mode-selector');
   }, []);
 
   const history = useHistory();
