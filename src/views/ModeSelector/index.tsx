@@ -2,7 +2,6 @@ import React, { MouseEvent, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 import Button from '../../components/Button';
-import BackToTop from '../../components/BackToTop';
 
 import { changeBackground } from '../../utils/background';
 import { ctntModeSelectorGen, ctntModeSelectorGames } from '../../vars/content';
@@ -76,8 +75,6 @@ const ModeSelector = () => {
           </div>
         </div>
       </div>
-
-      <BackToTop />
     </>
   );
 };

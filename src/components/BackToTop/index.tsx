@@ -1,11 +1,13 @@
 import React, { useEffect, useState, MouseEvent } from 'react';
 
-import useWindowSize from '../../hooks/useWindowSize';
-import useScrollPosition from '../../hooks/useScrollPosition';
+import useWindowSize from './hooks/useWindowSize';
+import useScrollPosition from './hooks/useScrollPosition';
 
-import './index.css';
+type BackToTopProps = {
+  btnStyle: string;
+};
 
-const BackToTop = () => {
+const BackToTop = ({ btnStyle }: BackToTopProps) => {
   const [width, height] = useWindowSize();
   const scrollYPosition = useScrollPosition();
 
@@ -39,7 +41,7 @@ const BackToTop = () => {
   };
 
   return backToTopActive ? (
-    <button className="backToTop" onClick={clickHandler}>
+    <button className={btnStyle} onClick={clickHandler}>
       &#8679;
     </button>
   ) : null;

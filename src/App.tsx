@@ -15,6 +15,7 @@ const App = () => {
           <MainPage />
         </Route>
       </Switch>
+      {/* <BackToTop btnStyle="back-to-top" /> */}
     </div>
   );
 };
