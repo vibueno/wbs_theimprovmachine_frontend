@@ -14,7 +14,7 @@ const BackToTop = () => {
   const updateState = () => {
     if (
       window.innerHeight + window.pageYOffset >=
-      document.body.offsetHeight / 0.6
+      document.body.offsetHeight / 0.75
     ) {
       window.setTimeout(function () {
         setBackToTopActive(true);

@@ -18,17 +18,24 @@ increased with media queries for bigger screens
   src: url(../../fonts/nebula-hollow.woff2);
 }
 
+.cover-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 1.5em;
+}
+
 h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 25vh 0 5vh 0;
   width: 100%;
+  margin: 0 0 0.15em 0;
   font-size: 2.1em;
   font-family: Nebula-Regular, sans-serif;
   text-align: center;
   text-shadow: -3px 0 #01278a, 0 3px #01278a, 3px 0 #01278a, 0 -3px #8ad4fe;
-  color: #fff;
 }
 
 h2 {
@@ -40,7 +47,6 @@ h2 {
   font-family: Nebula-Hollow, sans-serif;
   text-align: center;
   text-shadow: 1px 1px 0 #010514;
-  color: #fff;
 }
 
 .btn-enter-container {
@@ -53,17 +59,17 @@ h2 {
   border-width: 3px;
   min-width: 45px;
   min-height: 45px;
-  background-color: #010514;
+  background-color: var(--btn-color-forth);
   font-size: 1.5em;
 }
 
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 300px) {
   h1 {
     font-size: 3em;
   }
 
   h2 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 
   .btn-enter {
@@ -97,5 +103,15 @@ h2 {
 
   .btn-enter {
     font-size: 3em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 7.75em;
+  }
+
+  h2 {
+    font-size: 3.5em;
   }
 }

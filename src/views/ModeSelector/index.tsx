@@ -35,7 +35,7 @@ const ModeSelector = () => {
   return (
     <>
       <div className="mode-selector-bg">
-        <main>
+        <div className="selector-container">
           <div className="cards-container">
             <section className="card">
               <div className="card-text-container">
@@ -74,7 +74,7 @@ const ModeSelector = () => {
               clickHandler={onClickHandler}
             />
           </div>
-        </main>
+        </div>
       </div>
 
       <BackToTop />
