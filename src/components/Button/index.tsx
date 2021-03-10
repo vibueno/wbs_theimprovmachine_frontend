@@ -6,7 +6,7 @@ type ButtonProps = {
   id: string;
   label: string;
   btnStyle: string;
-  clickHandler: MouseEventHandler<HTMLButtonElement>;
+  clickHandler?: MouseEventHandler<HTMLButtonElement>;
 };
 
 const Button = ({ id, label, btnStyle, clickHandler }: ButtonProps) => {

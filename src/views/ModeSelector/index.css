@@ -67,29 +67,12 @@ increased with media queries for bigger screens
   text-align: center;
 }
 
-.card-btn {
-  width: 9em;
-  border-width: 3px;
-  min-height: 45px;
-  max-height: 2em;
-  margin: 0 auto;
-  background-color: var(--btn-color-forth);
-  font-size: 1em;
-}
-
 .btn-back-container {
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 1em;
   margin: 0;
-}
-
-.btn-back {
-  min-width: 45px;
-  min-height: 35px;
-  background-color: var(--btn-color-back);
-  font-size: 0.9em;
 }
 
 @media screen and (min-width: 300px) {

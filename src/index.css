@@ -38,6 +38,23 @@ body {
   src: url(./fonts/cairo-regular.woff2);
 }
 
+.btn-forth {
+  width: 9em;
+  border-width: 3px;
+  min-height: 45px;
+  max-height: 2em;
+  margin: 0 auto;
+  background-color: var(--btn-color-forth);
+  font-size: 1em;
+}
+
+.btn-back {
+  min-width: 45px;
+  min-height: 35px;
+  background-color: var(--btn-color-back);
+  font-size: 0.9em;
+}
+
 .back-to-top {
   display: flex;
   align-items: center;
