@@ -8,16 +8,6 @@ increased with media queries for bigger screens
   background-size: cover;
 }
 
-@font-face {
-  font-family: Nebula-Regular;
-  src: url(../../fonts/nebula-regular.woff2);
-}
-
-@font-face {
-  font-family: Nebula-Hollow;
-  src: url(../../fonts/nebula-hollow.woff2);
-}
-
 .cover-container {
   display: flex;
   flex-direction: column;

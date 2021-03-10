@@ -3,11 +3,6 @@ Sizes are set for small devices and then
 increased with media queries for bigger screens
  */
 
-@font-face {
-  font-family: Cairo-Regular;
-  src: url(../../fonts/cairo-regular.woff2);
-}
-
 .bg-mode-selector {
   height: 100vh;
   background: url('../../img/modeselector.jpg') no-repeat center center fixed;
