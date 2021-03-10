@@ -27,6 +27,7 @@ const Generator = () => {
 
   return (
     <>
+      <h3>Suggestion generator</h3>
       <div className="generator-container">
         <CategorySelector options={mapCategoriesforSelector(categories)} />
       </div>

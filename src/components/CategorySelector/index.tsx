@@ -13,9 +13,8 @@ const CategorySelector = ({ options }: CategorySelectorProps) => {
     container: (base: any) => ({
       ...base,
       flex: '40%',
-      minWidth: '150px',
+      minWidth: '170px',
       maxWidth: '250px',
-      margin: '0 1em 0 0',
       fontFamily: 'Cairo-Regular',
       color: '#000'
     })
@@ -33,7 +32,7 @@ const CategorySelector = ({ options }: CategorySelectorProps) => {
         <Select
           options={options}
           styles={styles}
-          placeholder="Select a category"
+          placeholder="Category"
           className="category-select"
         />
         <input
@@ -48,8 +47,8 @@ const CategorySelector = ({ options }: CategorySelectorProps) => {
 
         <Button
           id="category-selector-form-submit"
-          label="enter"
-          btnStyle="btn-forth"
+          label="hit me!"
+          btnStyle="btn-forth btn-form-submit"
         />
       </form>
     </>

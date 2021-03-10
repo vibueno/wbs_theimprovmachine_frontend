@@ -26,7 +26,7 @@ const MainPage = () => {
           <Button
             id="btn-enter"
             label="Enter&#13;&#10;&#13;&#10;&#9166;"
-            btnStyle="btn-enter"
+            btnStyle="btn-forth btn-enter"
             clickHandler={onClickHandler}
           />
         </div>

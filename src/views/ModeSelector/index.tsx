@@ -44,7 +44,7 @@ const ModeSelector = () => {
                 <Button
                   id="btn-mode-generator"
                   label="Generator"
-                  btnStyle="btn-forth"
+                  btnStyle="btn-forth card-btn"
                   clickHandler={onClickHandler}
                 />
               </div>
@@ -58,7 +58,7 @@ const ModeSelector = () => {
                 <Button
                   id="btn-mode-games"
                   label="Games"
-                  btnStyle="btn-forth"
+                  btnStyle="btn-forth card-btn"
                   clickHandler={onClickHandler}
                 />
               </div>
