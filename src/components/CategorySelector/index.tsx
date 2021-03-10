@@ -1,15 +1,11 @@
 import React from 'react';
 import Select from 'react-select';
 
+import CategorySelectorProps from '../../types/CategorySelectorProps';
+
 import './index.css';
 
-const CategorySelector = () => {
-  const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' }
-  ];
-
+const CategorySelector = ({ options }: CategorySelectorProps) => {
   return (
     <>
       <form>
