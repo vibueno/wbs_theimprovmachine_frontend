@@ -10,8 +10,12 @@ const SuggestionPictureList = ({ pictureList }: SuggestionPictureListProps) => {
   return (
     <>
       <div className="suggestion-pictures-container">
-        {pictureList.map(picture => (
-          <SuggestionPicture key={picture.id} src={picture.url} />
+        {pictureList.map((picture, index) => (
+          <SuggestionPicture
+            key={index}
+            url={picture.url}
+            description={picture.description}
+          />
         ))}
       </div>
     </>

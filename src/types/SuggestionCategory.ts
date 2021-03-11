@@ -3,6 +3,7 @@ type SuggestionCategory = {
   name: string;
   title: string;
   description: string;
+  contenttype: string;
 };
 
 export default SuggestionCategory;

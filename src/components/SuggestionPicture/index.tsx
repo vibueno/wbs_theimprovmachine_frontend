@@ -2,14 +2,12 @@ import React from 'react';
 
 import './index.css';
 
-type SuggestionPictureProps = {
-  src: string;
-};
+import SuggestionPictureProps from '../../types/SuggestionPictureProps';
 
-const SuggestionPicture = ({ src }: SuggestionPictureProps) => {
+const SuggestionPicture = ({ url }: SuggestionPictureProps) => {
   return (
     <>
-      <img className="suggestion-img" src={src} />
+      <img className="suggestion-img" src={url} />
     </>
   );
 };
