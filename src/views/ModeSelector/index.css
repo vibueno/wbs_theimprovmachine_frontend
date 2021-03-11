@@ -10,10 +10,10 @@ increased with media queries for bigger screens
   background-size: cover;
 }
 
-.selector-main-container {
+.selectors-container {
   display: grid;
   justify-content: center;
-  height: 100%;
+  height: 90vh;
 }
 
 .selector-container {

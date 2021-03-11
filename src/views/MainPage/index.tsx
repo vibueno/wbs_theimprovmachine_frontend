@@ -20,7 +20,7 @@ const MainPage = () => {
   return (
     <>
       <div className="cover-container">
-        <h1 className="title">{ctntAppTitle}</h1>
+        <h1>{ctntAppTitle}</h1>
         <h2>{ctntAppSubtitle}</h2>
         <div className="btn-enter-container">
           <Button

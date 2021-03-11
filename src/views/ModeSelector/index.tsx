@@ -33,7 +33,7 @@ const ModeSelector = () => {
   };
   return (
     <>
-      <div className="selector-main-container">
+      <div className="selectors-container">
         <div className="selector-container">
           <div className="cards-container">
             <section className="card">

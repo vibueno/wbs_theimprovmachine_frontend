@@ -19,10 +19,6 @@ body {
   color: var(--white);
 }
 
-.App {
-  height: 90vh;
-}
-
 @font-face {
   font-family: Nebula-Regular;
   src: url(./assets/fonts/nebula-regular.woff2);
@@ -39,9 +35,6 @@ body {
 }
 
 h1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
   max-width: 1300px;
   margin: 0 0 0.15em 0;
@@ -52,9 +45,6 @@ h1 {
 }
 
 h2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
   max-width: 1100px;
   margin: 0 0 1em 0;
@@ -65,8 +55,10 @@ h2 {
 }
 
 h3 {
+  display: flex;
+  justify-content: center;
   width: 100%;
-  margin: 0 auto;
+  margin: 10px 0;
   font-family: Nebula-Regular;
   font-size: 1.5em;
   text-align: center;
