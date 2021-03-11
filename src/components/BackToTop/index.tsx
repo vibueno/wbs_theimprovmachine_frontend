@@ -1,7 +1,7 @@
 import React, { useEffect, useState, MouseEvent } from 'react';
 
-import useWindowSize from './hooks/useWindowSize';
-import useScrollPosition from './hooks/useScrollPosition';
+import useWindowSize from '../../hooks/useWindowSize';
+import useScrollPosition from '../../hooks/useScrollPosition';
 
 type BackToTopProps = {
   btnStyle: string;
