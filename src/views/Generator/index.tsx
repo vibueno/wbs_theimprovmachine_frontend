@@ -6,7 +6,7 @@ import mapCategoriesforSelector from '../../utils/suggestioncategories';
 import apiRequest from '../../utils/api';
 
 import CategorySelector from '../../components/CategorySelector';
-import SuggestionPictures from '../../components/SuggestionPictures';
+import SuggestionPictureList from '../../components/SuggestionPictureList';
 
 import './index.css';
 
@@ -31,7 +31,7 @@ const Generator = () => {
       <h3>Suggestion generator</h3>
       <div className="generator-container">
         <CategorySelector options={mapCategoriesforSelector(categories)} />
-        <SuggestionPictures />
+        <SuggestionPictureList />
       </div>
     </>
   );

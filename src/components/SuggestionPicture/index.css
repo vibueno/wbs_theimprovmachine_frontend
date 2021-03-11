@@ -1,0 +1,9 @@
+.suggestion-img {
+  display: block;
+  filter: contrast(0.6);
+  min-width: 150px;
+  max-width: 90%;
+  min-height: 200px;
+  max-height: 500px;
+  margin: 1em 1em;
+}

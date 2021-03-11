@@ -8,7 +8,7 @@ increased with media queries for bigger screens
   justify-items: center;
   align-items: center;
   grid-template-columns: 1fr;
-  width: 95%;
+  width: 90%;
   min-width: 180px;
   max-width: 899px;
   min-height: 220px;
@@ -62,6 +62,7 @@ input[type='number'] {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    min-height: 150px;
     padding: 2em;
   }
 
