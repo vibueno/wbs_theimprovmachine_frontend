@@ -6,7 +6,9 @@ import mapCategoriesforSelector from '../../utils/suggestioncategories';
 import apiRequest from '../../utils/api';
 
 import CategorySelector from '../../components/CategorySelector';
-import SuggestionPictureList from '../../components/SuggestionPictureList';
+import SuggestionPictures from '../../views/SuggestionPictures';
+
+import Picture from '../../types/Picture';
 
 import './index.css';
 
@@ -16,6 +18,18 @@ const Generator = () => {
   }, []);
 
   const [categories, setCategories] = useState([]);
+  const [pictureList, setPictureList] = useState<Picture[]>([]);
+
+  useEffect(() => {
+    setPictureList([
+      {
+        id: 1,
+        url: 'https://apod.nasa.gov/apod/image/2103/ZodiacalLightBarn1024.jpg'
+      },
+      { id: 2, url: 'https://picsum.photos/600/800' },
+      { id: 3, url: 'https://picsum.photos/600/800' }
+    ]);
+  }, []);
 
   useEffect(() => {
     const getCategories = async () => {
@@ -31,7 +45,7 @@ const Generator = () => {
       <h3>Suggestion generator</h3>
       <div className="generator-container">
         <CategorySelector options={mapCategoriesforSelector(categories)} />
-        <SuggestionPictureList />
+        <SuggestionPictures pictureList={pictureList} />
       </div>
     </>
   );

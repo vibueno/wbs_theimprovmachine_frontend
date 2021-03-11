@@ -2,15 +2,17 @@ import React from 'react';
 
 import SuggestionPicture from '../SuggestionPicture';
 
+import SuggestionPictureListProps from '../../types/SuggestionPictureListProps';
+
 import './index.css';
 
-const SuggestionPictureList = () => {
+const SuggestionPictureList = ({ pictureList }: SuggestionPictureListProps) => {
   return (
     <>
       <div className="suggestion-pictures-container">
-        <SuggestionPicture src="https://picsum.photos/600/800" />
-        <SuggestionPicture src="https://picsum.photos/600/800" />
-        <SuggestionPicture src="https://picsum.photos/600/800" />
+        {pictureList.map(picture => (
+          <SuggestionPicture key={picture.id} src={picture.url} />
+        ))}
       </div>
     </>
   );
