@@ -10,7 +10,7 @@ increased with media queries for bigger screens
   grid-template-columns: 1fr;
   width: 90%;
   min-width: 180px;
-  max-width: 899px;
+  max-width: 900px;
   min-height: 220px;
   padding: 2em 0.5em;
   border-radius: 5px;
