@@ -1,0 +1,157 @@
+/*
+Sizes are optimized for small devices and then
+increased with media queries for bigger screens
+ */
+
+.bg-mode-selector {
+  height: 100vh;
+  background: url('../../assets/img/modeselector.jpg') no-repeat center center
+    fixed;
+  background-size: cover;
+}
+
+.selectors-container {
+  display: grid;
+  justify-content: center;
+  height: 90vh;
+}
+
+.selector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1500px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-basis: 100%;
+  margin: 0 1em 1em 1em;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 200px;
+  max-width: 1000px;
+  padding: 1em;
+  background-color: rgba(198, 245, 253, 0.3);
+  text-align: center;
+}
+
+.card-text-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 1.5em 0;
+  height: 80%;
+}
+
+.card-btn-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  height: 20%;
+  margin: 0 0 0.5em 0;
+}
+
+.card-btn {
+  width: 9em;
+  min-height: 45px;
+  max-height: 2em;
+  border-width: 3px;
+  margin: 0 auto;
+  font-size: 1em;
+}
+
+.card-text {
+  font-size: 1.2em;
+  font-family: cairo-regular, sans-serif;
+  text-align: center;
+}
+
+.btn-back-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1em;
+  margin: 0;
+}
+
+@media screen and (min-width: 300px) {
+  .card-text {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .card-text {
+    font-size: 1.75em;
+  }
+
+  .card-btn {
+    font-size: 1.5em;
+  }
+
+  .btn-back {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .card-text {
+    font-size: 2.25em;
+  }
+
+  .btn-back {
+    font-size: 1.5em;
+  }
+
+  .card-btn {
+    border-width: 5px;
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .card {
+    flex-basis: 30%;
+  }
+
+  .text {
+    font-size: 2.25em;
+  }
+
+  .card-btn {
+    font-size: 2.25em;
+  }
+
+  .btn-back-container {
+    margin: 2em 0 0 0;
+  }
+
+  .btn-back {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .card-container {
+    min-height: 450px;
+  }
+
+  .card-text {
+    font-size: 2.75em;
+  }
+
+  .card-btn {
+    font-size: 2.75em;
+  }
+}

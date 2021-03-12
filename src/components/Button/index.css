@@ -1,0 +1,9 @@
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 10px 10px 15px;
+  cursor: pointer;
+  font-family: Nebula-Regular, sans-serif;
+  color: #fff;
+}

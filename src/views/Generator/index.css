@@ -1,0 +1,14 @@
+.bg-generator {
+  background: url('../../assets/img/generator.jpg') no-repeat center center
+    fixed;
+  background-size: cover;
+}
+
+.generator-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1em 0;
+  width: 100%;
+}
