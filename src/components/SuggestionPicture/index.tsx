@@ -17,7 +17,7 @@ const SuggestionPicture = ({
         <a href={imagepage}>
           <img className="suggestion-img" src={url} />
         </a>
-        {description}
+        <p className="suggestion-img-desc">{description}</p>
       </div>
     </>
   );
