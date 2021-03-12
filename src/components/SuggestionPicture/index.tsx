@@ -4,10 +4,21 @@ import './index.css';
 
 import SuggestionPictureProps from '../../types/SuggestionPictureProps';
 
-const SuggestionPicture = ({ url }: SuggestionPictureProps) => {
+const SuggestionPicture = ({
+  url,
+  description,
+  imagepage,
+  authorname,
+  authorpage
+}: SuggestionPictureProps) => {
   return (
     <>
-      <img className="suggestion-img" src={url} />
+      <div className="suggestion-img-container">
+        <a href={imagepage}>
+          <img className="suggestion-img" src={url} />
+        </a>
+        {description}
+      </div>
     </>
   );
 };

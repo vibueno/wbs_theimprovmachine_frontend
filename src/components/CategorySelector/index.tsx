@@ -52,6 +52,7 @@ const CategorySelector = ({
           placeholder="Amount"
           min="1"
           max="5"
+          required
           onChange={e => setAmount(e.target.value as any)}
         />
 

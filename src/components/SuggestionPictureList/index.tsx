@@ -15,6 +15,9 @@ const SuggestionPictureList = ({ pictureList }: SuggestionPictureListProps) => {
             key={index}
             url={picture.url}
             description={picture.description}
+            imagepage={picture.imagepage}
+            authorname={picture.authorname}
+            authorpage={picture.authorpage}
           />
         ))}
       </div>
