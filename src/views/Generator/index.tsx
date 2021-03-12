@@ -6,9 +6,12 @@ import apiRequest from '../../utils/api';
 
 import CategorySelector from '../../components/CategorySelector';
 import SuggestionPictures from '../../views/SuggestionPictures';
+import SuggestionTexts from '../../views/SuggestionTexts';
 
 import SuggestionPictureProps from '../../types/SuggestionPictureProps';
 import SuggestionCategory from '../../types/SuggestionCategory';
+
+import SuggestionTextProps from '../../types/SuggestionTextProps';
 
 import { categoryContentType } from '../../vars/constants';
 
@@ -17,6 +20,7 @@ import './index.css';
 const Generator = () => {
   const [categories, setCategories] = useState<SuggestionCategory[]>([]);
   const [pictureList, setPictureList] = useState<SuggestionPictureProps[]>([]);
+  const [textList, setTextList] = useState<SuggestionTextProps[]>([]);
 
   const onSubmitHandler = async (category: string, amount: number) => {
     const url = new URL(
@@ -34,7 +38,7 @@ const Generator = () => {
           break;
 
         case categoryContentType.text:
-          console.log('TODO: text suggestions');
+          setTextList(response.data.suggestions);
       }
     }
   };
@@ -60,7 +64,10 @@ const Generator = () => {
           options={mapCategoriesforSelector(categories)}
           onSubmitHandler={onSubmitHandler}
         />
-        {pictureList ? <SuggestionPictures pictureList={pictureList} /> : null}
+        {pictureList.length ? (
+          <SuggestionPictures pictureList={pictureList} />
+        ) : null}
+        {textList.length ? <SuggestionTexts textList={textList} /> : null}
       </div>
     </>
   );
