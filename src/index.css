@@ -3,6 +3,7 @@
   --btn-color-back: #8b9db0;
   --white: #fff;
   --dark-blue: #001234;
+  --darkest-blue: #01030b;
 }
 
 * {
@@ -75,6 +76,9 @@ h3 {
   font-family: Nebula-Regular;
   font-size: 1.5em;
   text-align: center;
+  text-shadow: -1px -1px 0 var(--dark-blue), 1px -1px 0 var(--dark-blue),
+    -1px 1px 0 var(--dark-blue), 1px 1px 0 var(--dark-blue);
+  color: var(--white);
 }
 
 .btn-forth {
@@ -130,6 +134,13 @@ h3 {
     text-shadow: -2px -2px 0 var(--white), 2px -2px 0 var(--white),
       -2px 2px 0 var(--white), 2px 2px 0 var(--white);
     color: var(--dark-blue);
+  }
+
+  h3 {
+    font-size: 2.25em;
+    text-shadow: -2px -2px 0 var(--dark-blue), 2px -2px 0 var(--dark-blue),
+      -2px 2px 0 var(--dark-blue), 2px 2px 0 var(--dark-blue);
+    color: var(--white);
   }
 }
 

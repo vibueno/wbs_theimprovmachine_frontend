@@ -19,4 +19,16 @@ class APIAccessError extends Error {
   }
 }
 
-export { TemplateParamsError, TemplateInvalidError, APIAccessError };
+class RequiredFieldError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'ExternalAPIAccessError';
+  }
+}
+
+export {
+  TemplateParamsError,
+  TemplateInvalidError,
+  APIAccessError,
+  RequiredFieldError
+};

@@ -7,4 +7,13 @@ const msgTemplateArgs = 'The arguments passed do not seem to be valid';
 // API requests
 const msgAPIError = 'There was an error accessing the backend: ${error}.';
 
-export { msgStartup, msgTemplateInvalid, msgTemplateArgs, msgAPIError };
+// API requests
+const msgRequiredFieldError = 'The following fields are required: ${fields}.';
+
+export {
+  msgStartup,
+  msgTemplateInvalid,
+  msgTemplateArgs,
+  msgAPIError,
+  msgRequiredFieldError
+};

@@ -4,8 +4,9 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: auto;
+  width: 100%;
   min-width: 180px;
+  height: auto;
   border-radius: 5px;
   margin: 1em 0 0 0;
   padding: 1em 1em;

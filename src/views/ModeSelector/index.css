@@ -74,6 +74,7 @@ increased with media queries for bigger screens
 .card-text {
   font-size: 1.2em;
   text-align: center;
+  color: var(--darkest-blue);
 }
 
 .btn-back-container {

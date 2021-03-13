@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import useBackground from '../../hooks/useBackground';
 
 import mapCategoriesforSelector from '../../utils/suggestioncategories';
+import { fillInStrTemplate } from '../../utils/strtemplate';
+
 import apiRequest from '../../utils/api';
 
 import CategorySelector from '../../components/CategorySelector';
@@ -10,11 +12,14 @@ import SuggestionPictures from '../../views/SuggestionPictures';
 import SuggestionTexts from '../../views/SuggestionTexts';
 
 import SuggestionPictureProps from '../../types/SuggestionPictureProps';
+import SuggestionTextProps from '../../types/SuggestionTextProps';
 import SuggestionCategory from '../../types/SuggestionCategory';
 
-import SuggestionTextProps from '../../types/SuggestionTextProps';
-
 import { categoryContentType } from '../../vars/constants';
+
+import { msgRequiredFieldError } from '../../vars/messages';
+
+import { RequiredFieldError } from '../../utils/error';
 
 import './index.css';
 
@@ -29,6 +34,13 @@ const Generator = () => {
     amount: number
   ) => {
     e.preventDefault();
+
+    if (!category || !amount)
+      throw new RequiredFieldError(
+        fillInStrTemplate(msgRequiredFieldError, [
+          { param: 'fields', value: 'category and amount' }
+        ])
+      );
 
     const url = new URL(
       `suggestions?category=${category}&amount=${amount}`,
