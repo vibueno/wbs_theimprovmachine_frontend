@@ -5,6 +5,8 @@ import MainPage from './views/MainPage';
 import ModeSelector from './views/ModeSelector';
 import Generator from './views/Generator';
 
+import NoRoute from './views/NoRoute';
+
 // Dotenv set-up
 import * as dotenv from 'dotenv';
 
@@ -16,14 +18,17 @@ const App = () => {
   return (
     <div className="App">
       <Switch>
-        <Route path="/modeselector">
+        <Route exact path="/modeselector">
           <ModeSelector />
         </Route>
-        <Route path="/generator">
+        <Route exact path="/generator">
           <Generator />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <MainPage />
+        </Route>
+        <Route path="*">
+          <NoRoute />
         </Route>
       </Switch>
       {/* <BackToTop btnStyle="back-to-top" /> */}

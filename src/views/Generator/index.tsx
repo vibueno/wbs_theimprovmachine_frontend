@@ -17,7 +17,7 @@ import SuggestionCategory from '../../types/SuggestionCategory';
 
 import { categoryContentType } from '../../vars/constants';
 
-import { msgRequiredFieldError } from '../../vars/messages';
+import { msgRequiredField } from '../../vars/messages';
 
 import { RequiredFieldError } from '../../utils/error';
 
@@ -37,7 +37,7 @@ const Generator = () => {
 
     if (!category || !amount)
       throw new RequiredFieldError(
-        fillInStrTemplate(msgRequiredFieldError, [
+        fillInStrTemplate(msgRequiredField, [
           { param: 'fields', value: 'category and amount' }
         ])
       );
