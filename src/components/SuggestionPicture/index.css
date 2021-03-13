@@ -5,18 +5,12 @@
   max-width: 100%;
   height: auto;
   margin: 1em 1em;
-  filter: contrast(0.6);
 }
 
 .suggestion-img {
   display: inline-block;
   max-width: 100%;
   margin: 0 0 1em 0;
-}
-
-.suggestion-img-desc {
-  color: #012166;
-  text-align: center;
 }
 
 @media screen and (min-width: 600px) {
