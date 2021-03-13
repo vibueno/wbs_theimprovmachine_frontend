@@ -8,4 +8,17 @@ const mapCategoriesforSelector = (
     label: category.title
   }));
 };
-export default mapCategoriesforSelector;
+
+const getSuggestionAmountList = (amount: number) => {
+  const list = [];
+
+  for (let i = 1; i <= amount; i++) {
+    list.push({
+      value: i,
+      label: i.toString()
+    });
+  }
+  return list;
+};
+
+export { mapCategoriesforSelector, getSuggestionAmountList };

@@ -1,33 +1,34 @@
 import React, { useState, useRef } from 'react';
+
+/*
+It is recommended not to use CSS classes with the react-select component
+as pointed out on their website:
+https://react-select.com/styles#using-classnames
+Unfortunately, I didn't find a good way to change CSS properties (e.g., margins)
+depending on viewport size.
+ */
+
 import Select from 'react-select';
 
 import CategorySelectorProps from '../../types/CategorySelectorProps';
 import CategorySelectOption from '../../types/CategorySelectOption';
+import AmountSelectOption from '../../types/AmountSelectOption';
 
 import Button from '../Button';
 
 import './index.css';
 
 const CategorySelector = ({
-  options,
+  categoryOptions,
+  amountOptions,
   onSubmitHandler,
   onResetHandler
 }: CategorySelectorProps) => {
-  const styles = {
-    container: (base: any) => ({
-      ...base,
-      flex: '40%',
-      minWidth: '170px',
-      maxWidth: '250px',
-      fontFamily: 'Cairo-Regular',
-      color: '#000'
-    })
-  };
-
   const [category, setCategory] = useState<CategorySelectOption['value']>();
-  const [amount, setAmount] = useState<number>();
+  const [amount, setAmount] = useState<AmountSelectOption['value']>();
 
-  const selectRef = useRef(null);
+  const categorySelectRef = useRef(null);
+  const amountSelectRef = useRef(null);
 
   return (
     <>
@@ -36,28 +37,28 @@ const CategorySelector = ({
         className="category-selector-form"
       >
         <Select
-          options={options}
-          styles={styles}
+          options={categoryOptions}
           placeholder="Category"
-          className="category-select"
+          className="select-category"
           onChange={option => {
             if (option)
               setCategory(option!.value as CategorySelectOption['value']);
             else setCategory('');
           }}
           isClearable
-          ref={selectRef}
+          ref={categorySelectRef}
         />
-        <input
-          type="number"
-          className="suggestions-amount"
-          id="suggestionsAmount"
-          name="suggestionsAmount"
+
+        <Select
+          options={amountOptions}
           placeholder="Amount"
-          min="1"
-          max="5"
-          required
-          onChange={e => setAmount(e.target.value as any)}
+          className="select-amount"
+          onChange={option => {
+            if (option) setAmount(option!.value as AmountSelectOption['value']);
+            else setAmount('');
+          }}
+          isClearable
+          ref={amountSelectRef}
         />
 
         <Button
@@ -71,7 +72,7 @@ const CategorySelector = ({
           label="Reset"
           btnStyle="btn-back btn-reset"
           clickHandler={e => {
-            onResetHandler(e, selectRef);
+            onResetHandler(e, categorySelectRef, amountSelectRef);
           }}
         />
       </form>

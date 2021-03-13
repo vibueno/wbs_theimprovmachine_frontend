@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 import useBackground from '../../hooks/useBackground';
 
-import mapCategoriesforSelector from '../../utils/suggestioncategories';
+import {
+  mapCategoriesforSelector,
+  getSuggestionAmountList
+} from '../../utils/suggestioncategories';
 import { fillInStrTemplate } from '../../utils/strtemplate';
 
 import apiRequest from '../../utils/api';
@@ -62,12 +65,17 @@ const Generator = () => {
     }
   };
 
-  const onResetHandler = (e: MouseEvent, selectRef: HTMLFormElement) => {
+  const onResetHandler = (
+    e: MouseEvent,
+    categorySelectRef: HTMLFormElement,
+    amountSelectRef: HTMLFormElement
+  ) => {
     e.preventDefault();
     const target = e.target as Element;
     const form = target.parentNode as HTMLFormElement;
     form.reset();
-    selectRef.current.select.clearValue();
+    categorySelectRef.current.select.clearValue();
+    amountSelectRef.current.select.clearValue();
     setPictureList([]);
     setTextList([]);
   };
@@ -88,7 +96,8 @@ const Generator = () => {
       <h3>Suggestion generator</h3>
       <div className="generator-container">
         <CategorySelector
-          options={mapCategoriesforSelector(categories)}
+          categoryOptions={mapCategoriesforSelector(categories)}
+          amountOptions={getSuggestionAmountList(5)}
           onSubmitHandler={onSubmitHandler}
           onResetHandler={onResetHandler}
         />
