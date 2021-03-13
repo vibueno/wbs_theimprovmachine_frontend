@@ -23,7 +23,13 @@ const Generator = () => {
   const [pictureList, setPictureList] = useState<SuggestionPictureProps[]>([]);
   const [textList, setTextList] = useState<SuggestionTextProps[]>([]);
 
-  const onSubmitHandler = async (category: string, amount: number) => {
+  const onSubmitHandler = async (
+    e: MouseEvent,
+    category: string,
+    amount: number
+  ) => {
+    e.preventDefault();
+
     const url = new URL(
       `suggestions?category=${category}&amount=${amount}`,
       process.env.REACT_APP_BACKENDHOST!
@@ -44,6 +50,16 @@ const Generator = () => {
     }
   };
 
+  const onResetHandler = (e: MouseEvent, selectRef: HTMLFormElement) => {
+    e.preventDefault();
+    const target = e.target as Element;
+    const form = target.parentNode as HTMLFormElement;
+    form.reset();
+    selectRef.current.select.clearValue();
+    setPictureList([]);
+    setTextList([]);
+  };
+
   useBackground('bg-generator');
 
   useEffect(() => {
@@ -62,6 +78,7 @@ const Generator = () => {
         <CategorySelector
           options={mapCategoriesforSelector(categories)}
           onSubmitHandler={onSubmitHandler}
+          onResetHandler={onResetHandler}
         />
         {pictureList.length ? (
           <SuggestionPictures pictureList={pictureList} />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Select from 'react-select';
 
 import CategorySelectorProps from '../../types/CategorySelectorProps';
@@ -10,7 +10,8 @@ import './index.css';
 
 const CategorySelector = ({
   options,
-  onSubmitHandler
+  onSubmitHandler,
+  onResetHandler
 }: CategorySelectorProps) => {
   const styles = {
     container: (base: any) => ({
@@ -26,13 +27,12 @@ const CategorySelector = ({
   const [category, setCategory] = useState<CategorySelectOption['value']>();
   const [amount, setAmount] = useState<number>();
 
+  const selectRef = useRef(null);
+
   return (
     <>
       <form
-        onSubmit={e => {
-          e.preventDefault();
-          onSubmitHandler(category, amount);
-        }}
+        onSubmit={e => onSubmitHandler(e, category, amount)}
         className="category-selector-form"
       >
         <Select
@@ -40,9 +40,13 @@ const CategorySelector = ({
           styles={styles}
           placeholder="Category"
           className="category-select"
-          onChange={option =>
-            setCategory(option!.value as CategorySelectOption['value'])
-          }
+          onChange={option => {
+            if (option)
+              setCategory(option!.value as CategorySelectOption['value']);
+            else setCategory('');
+          }}
+          isClearable
+          ref={selectRef}
         />
         <input
           type="number"
@@ -60,6 +64,15 @@ const CategorySelector = ({
           id="category-selector-form-submit"
           label="hit me!"
           btnStyle="btn-forth btn-form-submit"
+        />
+
+        <Button
+          id="category-selector-reset"
+          label="Reset"
+          btnStyle="btn-back btn-reset"
+          clickHandler={e => {
+            onResetHandler(e, selectRef);
+          }}
         />
       </form>
     </>
