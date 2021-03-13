@@ -43,7 +43,7 @@ increased with media queries for bigger screens
   min-width: 200px;
   max-width: 1000px;
   padding: 1em;
-  background-color: rgba(198, 245, 253, 0.3);
+  background-color: var(--light-blue-transparent2);
   text-align: center;
 }
 

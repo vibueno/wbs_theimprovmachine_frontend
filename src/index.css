@@ -2,8 +2,15 @@
   --btn-color-forth: #010514;
   --btn-color-back: #8b9db0;
   --white: #fff;
+  --light-blue: #8ad4fe;
+  --light-blue-transparent: rgba(198, 245, 253, 0.7);
+  --light-blue-transparent2: rgba(198, 245, 253, 0.3);
+  --blue: #01278a;
+  --blue-outline: #0086ff;
   --dark-blue: #001234;
   --darkest-blue: #01030b;
+  --light-grey: #cccccc;
+  --dark-grey: #868686;
 }
 
 * {
@@ -53,7 +60,8 @@ h1 {
   font-size: 2em;
   font-family: Nebula-Regular, sans-serif;
   text-align: center;
-  text-shadow: -3px 0 #01278a, 0 3px #01278a, 3px 0 #01278a, 0 -3px #8ad4fe;
+  text-shadow: -3px 0 var(--blue), 0 3px var(--blue), 3px 0 var(--blue),
+    0 -3px var(--light-blue);
 }
 
 h2 {

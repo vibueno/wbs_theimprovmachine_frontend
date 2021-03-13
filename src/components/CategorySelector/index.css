@@ -14,7 +14,7 @@ increased with media queries for bigger screens
   padding: 2em 0.5em;
   border-radius: 5px;
   margin: 0 0 2em 0;
-  background-color: rgba(198, 245, 253, 0.7);
+  background-color: var(--light-blue-transparent);
 }
 
 .suggestions-amount {
@@ -22,10 +22,10 @@ increased with media queries for bigger screens
   width: 75px;
   height: 45px;
   padding: 0 0 0 10px;
-  border: 1px solid #cccccc;
+  border: 1px solid var(--light-grey);
   border-radius: 5px;
   margin: 1em 0 2em 0;
-  color: #3a3346;
+  color: var(--dark-grey);
 }
 
 .btn-form-submit {
@@ -45,7 +45,7 @@ increased with media queries for bigger screens
 
 /* Hard "outline" with box-shadow: */
 .suggestions-amount:focus {
-  box-shadow: 0 0 0 2px #0086ff;
+  box-shadow: 0 0 0 2px var(--blue-outline);
 }
 
 /*

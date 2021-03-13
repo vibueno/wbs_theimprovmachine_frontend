@@ -9,5 +9,5 @@
   max-width: 1300px;
   border-radius: 5px;
   padding: 1em 1em;
-  background-color: rgba(198, 245, 253, 0.7);
+  background-color: var(--light-blue-transparent);
 }
