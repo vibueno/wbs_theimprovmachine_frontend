@@ -1,3 +1,8 @@
+/*
+Sizes in all stylesheets are optimized for small devices and then
+increased with media queries for bigger screens
+ */
+
 :root {
   --btn-color-forth: #010514;
   --btn-color-back: #8b9db0;

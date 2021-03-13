@@ -15,6 +15,20 @@
   max-width: 1300px;
 }
 
+.suggestions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 180px;
+  height: auto;
+  border-radius: 5px;
+  margin: 1em 0 0 0;
+  padding: 1em 1em;
+  background-color: var(--light-blue-transparent);
+}
+
 @media screen and ((min-width: 450px) or (min-height: 300px)) {
   .bg-generator {
     background: url('../../assets/img/generator/750w.jpg') no-repeat center

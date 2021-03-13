@@ -1,8 +1,3 @@
-/*
-Sizes are optimized for small devices and then
-increased with media queries for bigger screens
- */
-
 .bg-main-page {
   background: url('../../assets/img/mainpage/500w.jpg') no-repeat center center
     fixed;

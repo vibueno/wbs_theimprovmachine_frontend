@@ -7,7 +7,7 @@ import './index.css';
 const SuggestionTextList = ({ textList }: SuggestionTextListProps) => {
   return (
     <>
-      <div className="suggestion-texts-container">
+      <div className="suggestions-container">
         {textList.map((textColumn, index) => (
           <div key={index} className="suggestion-text">
             {Object.keys(textColumn).map(textItem => (

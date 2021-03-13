@@ -1,8 +1,3 @@
-/*
-Sizes are optimized for small devices and then
-increased with media queries for bigger screens
- */
-
 .category-selector-form {
   display: grid;
   justify-items: center;
