@@ -1,17 +1,16 @@
-import React, { MouseEvent, useEffect } from 'react';
+import React, { MouseEvent } from 'react';
 import { useHistory } from 'react-router-dom';
+
+import useBackground from '../../hooks/useBackground';
 
 import Button from '../../components/Button';
 
-import { setBackground } from '../../utils/background';
 import { ctntModeSelectorGen, ctntModeSelectorGames } from '../../vars/content';
 
 import './index.css';
 
 const ModeSelector = () => {
-  useEffect(() => {
-    setBackground('bg-mode-selector');
-  }, []);
+  useBackground('bg-mode-selector');
 
   const history = useHistory();
 

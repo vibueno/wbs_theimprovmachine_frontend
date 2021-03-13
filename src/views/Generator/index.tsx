@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import { setBackground } from '../../utils/background';
+import useBackground from '../../hooks/useBackground';
+
 import mapCategoriesforSelector from '../../utils/suggestioncategories';
 import apiRequest from '../../utils/api';
 
@@ -43,9 +44,7 @@ const Generator = () => {
     }
   };
 
-  useEffect(() => {
-    setBackground('bg-generator');
-  }, []);
+  useBackground('bg-generator');
 
   useEffect(() => {
     const getCategories = async () => {
