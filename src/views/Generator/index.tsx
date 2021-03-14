@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 import useBackground from '../../hooks/useBackground';
 
@@ -33,6 +33,10 @@ const Generator = () => {
   const [categories, setCategories] = useState<SuggestionCategory[]>([]);
   const [pictureList, setPictureList] = useState<SuggestionPictureProps[]>([]);
   const [textList, setTextList] = useState<SuggestionTextProps[]>([]);
+
+  const categorySelectRef = useRef(null);
+  const amountSelectRef = useRef(null);
+  const ref = { categorySelectRef, amountSelectRef };
 
   const validateInput = (category: string, amount: number) => {
     if (!category || !amount)
@@ -113,6 +117,7 @@ const Generator = () => {
           amountOptions={getSuggestionAmountList(maxSuggestionAmount)}
           onSubmitHandler={onSubmitHandler}
           onResetHandler={onResetHandler}
+          ref={ref}
         />
         {pictureList.length ? (
           <SuggestionPictures pictureList={pictureList} />

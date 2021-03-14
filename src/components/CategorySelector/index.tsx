@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 /*
 It is recommended not to use CSS classes with the react-select component
@@ -18,66 +18,73 @@ import Button from '../Button';
 
 import './index.css';
 
-const CategorySelector = ({
-  categoryOptions,
-  amountOptions,
-  onSubmitHandler,
-  onResetHandler
-}: CategorySelectorProps) => {
-  const [category, setCategory] = useState<CategorySelectOption['value']>();
-  const [amount, setAmount] = useState<AmountSelectOption['value']>();
+const CategorySelector = React.forwardRef(
+  (
+    {
+      categoryOptions,
+      amountOptions,
+      onSubmitHandler,
+      onResetHandler
+    }: CategorySelectorProps,
+    ref
+  ) => {
+    const [category, setCategory] = useState<CategorySelectOption['value']>();
+    const [amount, setAmount] = useState<AmountSelectOption['value']>();
 
-  const categorySelectRef = useRef(null);
-  const amountSelectRef = useRef(null);
+    const { categorySelectRef, amountSelectRef } = ref;
 
-  return (
-    <>
-      <form
-        onSubmit={e => onSubmitHandler(e, category, amount)}
-        className="category-selector-form"
-      >
-        <Select
-          options={categoryOptions}
-          placeholder="Category"
-          className="select-category"
-          onChange={option => {
-            if (option)
-              setCategory(option!.value as CategorySelectOption['value']);
-            else setCategory('');
-          }}
-          isClearable
-          ref={categorySelectRef}
-        />
+    return (
+      <>
+        <form
+          onSubmit={e => onSubmitHandler(e, category, amount)}
+          className="category-selector-form"
+        >
+          <Select
+            options={categoryOptions}
+            placeholder="Category"
+            className="select-category"
+            onChange={option => {
+              if (option)
+                setCategory(option!.value as CategorySelectOption['value']);
+              else setCategory('');
+            }}
+            isClearable
+            ref={categorySelectRef}
+          />
 
-        <Select
-          options={amountOptions}
-          placeholder="Amount"
-          className="select-amount"
-          onChange={option => {
-            if (option) setAmount(option!.value as AmountSelectOption['value']);
-            else setAmount('');
-          }}
-          isClearable
-          ref={amountSelectRef}
-        />
+          <Select
+            options={amountOptions}
+            placeholder="Amount"
+            className="select-amount"
+            onChange={option => {
+              if (option)
+                setAmount(option!.value as AmountSelectOption['value']);
+              else setAmount('');
+            }}
+            isClearable
+            ref={amountSelectRef}
+          />
 
-        <Button
-          id="category-selector-form-submit"
-          label="hit me!"
-          btnStyle="btn-forth btn-form-submit"
-        />
+          <Button
+            id="category-selector-form-submit"
+            label="hit me!"
+            btnStyle="btn-forth btn-form-submit"
+          />
 
-        <Button
-          id="category-selector-reset"
-          label="Reset"
-          btnStyle="btn-back btn-reset"
-          clickHandler={e => {
-            onResetHandler(e, categorySelectRef, amountSelectRef);
-          }}
-        />
-      </form>
-    </>
-  );
-};
+          <Button
+            id="category-selector-reset"
+            label="Reset"
+            btnStyle="btn-back btn-reset"
+            clickHandler={e => {
+              onResetHandler(e, categorySelectRef, amountSelectRef);
+            }}
+          />
+        </form>
+      </>
+    );
+  }
+);
+
+CategorySelector.displayName = 'CategorySelector';
 
 export default CategorySelector;
