@@ -26,9 +26,17 @@ class RequiredFieldError extends Error {
   }
 }
 
+class MaxSuggestionAmountError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'MaxSuggestionAmountError';
+  }
+}
+
 export {
   TemplateParamsError,
   TemplateInvalidError,
   APIAccessError,
-  RequiredFieldError
+  RequiredFieldError,
+  MaxSuggestionAmountError
 };

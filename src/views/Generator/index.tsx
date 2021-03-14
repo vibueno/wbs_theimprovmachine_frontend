@@ -18,11 +18,14 @@ import SuggestionPictureProps from '../../types/SuggestionPictureProps';
 import SuggestionTextProps from '../../types/SuggestionTextProps';
 import SuggestionCategory from '../../types/SuggestionCategory';
 
-import { categoryContentType } from '../../vars/constants';
+import { categoryContentType, maxSuggestionAmount } from '../../vars/constants';
 
-import { msgRequiredField } from '../../vars/messages';
+import { msgRequiredField, msgMaxSuggestionAmount } from '../../vars/messages';
 
-import { RequiredFieldError } from '../../utils/error';
+import {
+  RequiredFieldError,
+  MaxSuggestionAmountError
+} from '../../utils/error';
 
 import './index.css';
 
@@ -31,6 +34,21 @@ const Generator = () => {
   const [pictureList, setPictureList] = useState<SuggestionPictureProps[]>([]);
   const [textList, setTextList] = useState<SuggestionTextProps[]>([]);
 
+  const validateInput = (category: string, amount: number) => {
+    if (!category || !amount)
+      throw new RequiredFieldError(
+        fillInStrTemplate(msgRequiredField, [
+          { param: 'fields', value: 'category and amount' }
+        ])
+      );
+    if (amount > maxSuggestionAmount)
+      throw new MaxSuggestionAmountError(
+        fillInStrTemplate(msgMaxSuggestionAmount, [
+          { param: 'amount', value: maxSuggestionAmount }
+        ])
+      );
+  };
+
   const onSubmitHandler = async (
     e: MouseEvent,
     category: string,
@@ -38,12 +56,7 @@ const Generator = () => {
   ) => {
     e.preventDefault();
 
-    if (!category || !amount)
-      throw new RequiredFieldError(
-        fillInStrTemplate(msgRequiredField, [
-          { param: 'fields', value: 'category and amount' }
-        ])
-      );
+    validateInput(category, amount);
 
     const url = new URL(
       `suggestions?category=${category}&amount=${amount}`,
@@ -97,7 +110,7 @@ const Generator = () => {
       <div className="generator-container">
         <CategorySelector
           categoryOptions={mapCategoriesforSelector(categories)}
-          amountOptions={getSuggestionAmountList(5)}
+          amountOptions={getSuggestionAmountList(maxSuggestionAmount)}
           onSubmitHandler={onSubmitHandler}
           onResetHandler={onResetHandler}
         />

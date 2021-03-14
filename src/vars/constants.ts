@@ -3,4 +3,6 @@ const categoryContentType = {
   text: 'text'
 };
 
-export { categoryContentType };
+const maxSuggestionAmount = 5;
+
+export { categoryContentType, maxSuggestionAmount };
