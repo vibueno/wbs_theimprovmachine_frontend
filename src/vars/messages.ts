@@ -11,7 +11,10 @@ const msgTemplateInvalid = 'The string provided is not a valid template';
 const msgTemplateArgs = 'The arguments passed are not valid';
 
 // API requests
-const msgAPIError = 'There was an error accessing the backend: ${error}.';
+const msgBackendError = 'Error accessing the backend: ${errorMsg}.';
+
+const msgAPIError =
+  'The API request failed with error ${errorCode}: ${errorMsg}.';
 
 export {
   msgStartup,
@@ -21,5 +24,6 @@ export {
   msgMaxSuggestionAmount,
   msgTemplateInvalid,
   msgTemplateArgs,
+  msgBackendError,
   msgAPIError
 };

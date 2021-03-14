@@ -1,4 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useContext } from 'react';
+
+import { ErrorContext } from '../../vars/context';
 
 import useBackground from '../../hooks/useBackground';
 
@@ -6,6 +8,7 @@ import {
   mapCategoriesforSelector,
   getSuggestionAmountList
 } from '../../utils/suggestioncategories';
+
 import { fillInStrTemplate } from '../../utils/strtemplate';
 
 import apiRequest from '../../utils/api';
@@ -18,7 +21,11 @@ import SuggestionPictureProps from '../../types/SuggestionPictureProps';
 import SuggestionTextProps from '../../types/SuggestionTextProps';
 import SuggestionCategory from '../../types/SuggestionCategory';
 
-import { categoryContentType, maxSuggestionAmount } from '../../vars/constants';
+import {
+  categoryContentType,
+  maxSuggestionAmount,
+  errorSeverity
+} from '../../vars/constants';
 
 import { msgRequiredField, msgMaxSuggestionAmount } from '../../vars/messages';
 
@@ -30,6 +37,8 @@ import {
 import './index.css';
 
 const Generator = () => {
+  const { setError } = useContext(ErrorContext);
+
   const [categories, setCategories] = useState<SuggestionCategory[]>([]);
   const [pictureList, setPictureList] = useState<SuggestionPictureProps[]>([]);
   const [textList, setTextList] = useState<SuggestionTextProps[]>([]);
@@ -60,13 +69,26 @@ const Generator = () => {
   ) => {
     e.preventDefault();
 
-    validateInput(category, amount);
-
+    try {
+      validateInput(category, amount);
+      setError({ message: null });
+    } catch (e) {
+      setError({ message: e.message, severity: errorSeverity.notice });
+      return;
+    }
     const url = new URL(
       `suggestions?category=${category}&amount=${amount}`,
       process.env.REACT_APP_BACKENDHOST!
     );
-    const response = await apiRequest(url.href);
+
+    let response;
+    try {
+      response = await apiRequest(url.href);
+      setError({ message: null });
+    } catch (e) {
+      setError({ message: e.message, severity: errorSeverity.critical });
+      return;
+    }
 
     const categoryObject = categories.find(cat => cat.name === category);
 
@@ -95,6 +117,7 @@ const Generator = () => {
     amountSelectRef.current.select.clearValue();
     setPictureList([]);
     setTextList([]);
+    setError({ message: null });
   };
 
   useBackground('bg-generator');
@@ -102,8 +125,15 @@ const Generator = () => {
   useEffect(() => {
     const getCategories = async () => {
       const url = new URL('categories', process.env.REACT_APP_BACKENDHOST!);
-      const response = await apiRequest(url.href);
-      setCategories(response.data);
+      let response;
+
+      try {
+        response = await apiRequest(url.href);
+        setCategories(response.data);
+        setError({ message: null });
+      } catch (e) {
+        setError({ message: e.message, severity: errorSeverity.critical });
+      }
     };
     getCategories();
   }, []);

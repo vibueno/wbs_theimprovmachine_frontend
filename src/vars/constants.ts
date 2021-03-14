@@ -1,8 +1,13 @@
+const maxSuggestionAmount = 5;
+
 const categoryContentType = {
   image: 'image',
   text: 'text'
 };
 
-const maxSuggestionAmount = 5;
+const errorSeverity = {
+  critical: 'critical',
+  notice: 'notice'
+};
 
-export { categoryContentType, maxSuggestionAmount };
+export { maxSuggestionAmount, categoryContentType, errorSeverity };

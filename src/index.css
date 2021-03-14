@@ -16,6 +16,12 @@ increased with media queries for bigger screens
   --darkest-blue: #01030b;
   --light-grey: #cccccc;
   --dark-grey: #868686;
+
+  /* Errors */
+  --critical-error: #e50000;
+  --notice-error: #2aab24;
+
+  --border-radius: 5px;
 }
 
 * {

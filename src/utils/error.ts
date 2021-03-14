@@ -12,17 +12,24 @@ class TemplateInvalidError extends Error {
   }
 }
 
-class APIAccessError extends Error {
+class BackendError extends Error {
   constructor(message: string) {
     super(message);
-    this.name = 'ExternalAPIAccessError';
+    this.name = 'BackendError';
+  }
+}
+
+class ApiError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'APIError';
   }
 }
 
 class RequiredFieldError extends Error {
   constructor(message: string) {
     super(message);
-    this.name = 'ExternalAPIAccessError';
+    this.name = 'RequiredFieldError';
   }
 }
 
@@ -36,7 +43,8 @@ class MaxSuggestionAmountError extends Error {
 export {
   TemplateParamsError,
   TemplateInvalidError,
-  APIAccessError,
+  BackendError,
+  ApiError,
   RequiredFieldError,
   MaxSuggestionAmountError
 };

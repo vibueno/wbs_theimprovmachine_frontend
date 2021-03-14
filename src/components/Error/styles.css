@@ -1,0 +1,23 @@
+.error-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  min-height: 50px;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  font-size: 1.1em;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.critical {
+  background-color: var(--critical-error);
+}
+
+.notice {
+  background-color: var(--notice-error);
+}
