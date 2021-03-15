@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SuggestionPicture from '../SuggestionPicture';
+
 import SuggestionPictureListProps from '../../types/SuggestionPictureListProps';
 
 const SuggestionPictureList = ({

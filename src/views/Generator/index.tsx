@@ -1,8 +1,12 @@
 import React, { useEffect, useState, useRef, useContext } from 'react';
 
+import { ErrorContext } from '../../vars/context';
+
 import useBackground from '../../hooks/useBackground';
 
-import { ErrorContext } from '../../vars/context';
+import GeneratorResults from '../../views/GeneratorResults';
+import CategorySelector from '../../components/CategorySelector';
+
 import { maxSuggestionAmount, errorSeverity } from '../../vars/constants';
 import { msgRequiredField, msgMaxSuggestionAmount } from '../../vars/messages';
 
@@ -22,9 +26,6 @@ import {
 } from '../../utils/error';
 
 import { fillInStrTemplate } from '../../utils/strtemplate';
-
-import GeneratorResults from '../../views/GeneratorResults';
-import CategorySelector from '../../components/CategorySelector';
 
 import './index.css';
 

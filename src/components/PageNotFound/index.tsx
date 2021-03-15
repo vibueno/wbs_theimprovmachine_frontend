@@ -1,11 +1,11 @@
 import React from 'react';
 
 import { useHistory } from 'react-router';
-
 import useBackground from '../../hooks/useBackground';
-import { msgPageNotFound1, msgPageNotFound2 } from '../../vars/messages';
 
 import Button from '../../components/Button';
+
+import { msgPageNotFound1, msgPageNotFound2 } from '../../vars/messages';
 
 import './index.css';
 

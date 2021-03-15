@@ -1,4 +1,5 @@
 import React from 'react';
+
 import SuggestionTextList from '../../components/SuggestionTextList';
 
 import SuggestionTextListProps from '../../types/SuggestionTextListProps';

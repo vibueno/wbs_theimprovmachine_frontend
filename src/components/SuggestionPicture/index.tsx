@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './index.css';
-
 import SuggestionPictureProps from '../../types/SuggestionPictureProps';
+
+import './index.css';
 
 const SuggestionPicture = ({
   url,
