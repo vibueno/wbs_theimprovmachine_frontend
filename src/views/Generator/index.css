@@ -13,7 +13,7 @@
   min-width: 180px;
   min-height: 275px;
   padding: 2em 0.5em;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-light);
   margin: 0 0 2em 0;
   background-color: var(--light-blue-transparent);
 }
@@ -69,7 +69,7 @@
   width: 100%;
   min-width: 180px;
   height: 100%;
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-light);
   margin: 1em 0 0 0;
   padding: 1em 1em;
   background-color: var(--light-blue-transparent);
@@ -100,14 +100,14 @@
   padding: 0.5em;
   margin: 0 0 0.5em 0;
   background-color: var(--lightest-blue);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-light);
   color: var(--dark-blue);
   text-align: center;
 }
 
 @media screen and (min-width: 500px) {
   .suggestion-img-container {
-    max-width: 40%;
+    width: 40%;
   }
 }
 
@@ -137,7 +137,7 @@
 
 @media screen and (min-width: 900px) {
   .suggestion-img-container {
-    max-width: 30%;
+    width: 30%;
   }
 }
 
