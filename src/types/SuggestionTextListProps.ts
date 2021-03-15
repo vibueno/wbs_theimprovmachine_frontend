@@ -1,8 +1,8 @@
-import SuggestionTextProps from './SuggestionTextProps';
+import GenericStringObject from './GenericStringObject';
 
 type SuggestionTextListProps = {
   category: string;
-  textList: SuggestionTextProps[];
+  textList: GenericStringObject[];
 };
 
 export default SuggestionTextListProps;
