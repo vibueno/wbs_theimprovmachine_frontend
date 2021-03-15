@@ -4,8 +4,8 @@ import AmountSelectOption from './AmountSelectOption';
 type CategorySelectorProps = {
   categoryOptions: categorySelectOption[];
   amountOptions: AmountSelectOption[];
-  onSubmitHandler: Function;
-  onResetHandler: Function;
+  onSubmitHandler: () => {};
+  onResetHandler: () => {};
 };
 
 export default CategorySelectorProps;

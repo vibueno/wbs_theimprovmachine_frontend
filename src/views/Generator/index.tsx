@@ -8,24 +8,19 @@ import GeneratorResults from '../../views/GeneratorResults';
 import CategorySelector from '../../components/CategorySelector';
 
 import { maxSuggestionAmount, errorSeverity } from '../../vars/constants';
-import { msgRequiredField, msgMaxSuggestionAmount } from '../../vars/messages';
 
 import SuggestionCategory from '../../types/SuggestionCategory';
 import SuggestionList from '../../types/SuggestionList';
 
 import apiRequest from '../../utils/api';
 
+import { validateGeneratorInput } from '../../utils/validations';
+
 import {
   mapCategoriesforSelector,
-  getSuggestionAmountList
-} from '../../utils/suggestioncategories';
-
-import {
-  RequiredFieldError,
-  MaxSuggestionAmountError
-} from '../../utils/error';
-
-import { fillInStrTemplate } from '../../utils/strtemplate';
+  getSuggestionAmountList,
+  createSuggestionObject
+} from '../../utils/suggestion';
 
 import './index.css';
 
@@ -39,21 +34,6 @@ const Generator = () => {
   const amountSelectRef = useRef(null);
   const ref = { categorySelectRef, amountSelectRef };
 
-  const validateInput = (category: string, amount: number) => {
-    if (!category || !amount)
-      throw new RequiredFieldError(
-        fillInStrTemplate(msgRequiredField, [
-          { param: 'fields', value: 'category and amount' }
-        ])
-      );
-    if (amount > maxSuggestionAmount)
-      throw new MaxSuggestionAmountError(
-        fillInStrTemplate(msgMaxSuggestionAmount, [
-          { param: 'amount', value: maxSuggestionAmount }
-        ])
-      );
-  };
-
   const onSubmitHandler = async (
     e: MouseEvent,
     category: string,
@@ -62,7 +42,7 @@ const Generator = () => {
     e.preventDefault();
 
     try {
-      validateInput(category, amount);
+      validateGeneratorInput(category, amount);
     } catch (e) {
       setError({ message: e.message, severity: errorSeverity.notice });
       return;
@@ -80,12 +60,10 @@ const Generator = () => {
       return;
     }
 
-    const categoryObject = categories.find(cat => cat.name === category);
-    const suggestion = {
-      category: categoryObject.title,
-      contenttype: categoryObject.contenttype,
-      suggestions: response.data.suggestions
-    };
+    const suggestion = createSuggestionObject(
+      categories.find(cat => cat.name === category),
+      response.data.suggestions
+    );
 
     setSuggestionList([...suggestionList, suggestion]);
   };
