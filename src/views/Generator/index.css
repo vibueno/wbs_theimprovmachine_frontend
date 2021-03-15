@@ -29,6 +29,17 @@
   background-color: var(--light-blue-transparent);
 }
 
+.category-title {
+  width: 100%;
+  border-radius: var(--border-radius);
+  margin: 0 0 1em 0;
+  background-color: #d7f2f5;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  color: var(--darkest-blue);
+}
+
 @media screen and ((min-width: 450px) or (min-height: 300px)) {
   .bg-generator {
     background: url('../../assets/img/generator/750w.jpg') no-repeat center
