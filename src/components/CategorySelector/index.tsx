@@ -10,11 +10,11 @@ depending on viewport size.
 
 import Select from 'react-select';
 
+import Button from '../Button';
+
 import CategorySelectorProps from '../../types/CategorySelectorProps';
 import CategorySelectOption from '../../types/CategorySelectOption';
 import AmountSelectOption from '../../types/AmountSelectOption';
-
-import Button from '../Button';
 
 import './index.css';
 

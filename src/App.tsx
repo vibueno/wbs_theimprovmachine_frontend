@@ -6,7 +6,6 @@ import { ErrorContext } from './vars/context';
 import MainPage from './views/MainPage';
 import ModeSelector from './views/ModeSelector';
 import Generator from './views/Generator';
-
 import NoRoute from './views/NoRoute';
 
 import Error from './components/Error';

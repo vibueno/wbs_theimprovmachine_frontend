@@ -1,8 +1,8 @@
 import React from 'react';
 
-import SuggestionList from '../../types/SuggestionList';
-
 import SuggestionResult from '../../views/SuggestionResult';
+
+import SuggestionList from '../../types/SuggestionList';
 
 const GeneratorResults = ({ suggestionList }: SuggestionList) => {
   return (
