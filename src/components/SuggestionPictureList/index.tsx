@@ -32,7 +32,7 @@ const SuggestionPictureList = ({
     <>
       {!allPicsLoaded ? <Spinner /> : null}
       <div className={`${getContainerClass(allPicsLoaded)}`}>
-        <div className="category-title">{category}</div>
+        <h4>{category}</h4>
         {pictureList.map((picture, index) => (
           <SuggestionPicture
             id={index}

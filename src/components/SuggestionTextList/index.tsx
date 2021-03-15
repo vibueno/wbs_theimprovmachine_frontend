@@ -9,7 +9,7 @@ const SuggestionTextList = ({
   return (
     <>
       <div className="suggestions-container">
-        <div className="category-title">{category}</div>
+        <h4>{category}</h4>
         {textList.map((textColumn, index) => (
           <div key={index} className="suggestion-text">
             {Object.keys(textColumn).map(textItem => (
