@@ -20,13 +20,13 @@ const App = () => {
     dotenv.config();
   }, []);
 
-  const [error, setError] = useState<ErrorObject>({ message: null });
+  const [error, setError] = useState<ErrorObject>();
   const errorValue = { error, setError };
 
   return (
     <ErrorContext.Provider value={errorValue}>
       <div className="App">
-        {error.message ? (
+        {error ? (
           <Error message={error.message} severity={error.severity} />
         ) : null}
         <Switch>
