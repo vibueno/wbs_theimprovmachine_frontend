@@ -2,8 +2,6 @@ import React from 'react';
 
 import SuggestionTextListProps from '../../types/SuggestionTextListProps';
 
-import './index.css';
-
 const SuggestionTextList = ({
   category,
   textList
