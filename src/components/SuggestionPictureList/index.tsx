@@ -3,10 +3,14 @@ import React from 'react';
 import SuggestionPicture from '../SuggestionPicture';
 import SuggestionPictureListProps from '../../types/SuggestionPictureListProps';
 
-const SuggestionPictureList = ({ pictureList }: SuggestionPictureListProps) => {
+const SuggestionPictureList = ({
+  category,
+  pictureList
+}: SuggestionPictureListProps) => {
   return (
     <>
       <div className="suggestions-container">
+        <div className="category-title">{category}</div>
         {pictureList.map((picture, index) => (
           <SuggestionPicture
             key={index}
