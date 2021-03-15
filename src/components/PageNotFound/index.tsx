@@ -9,7 +9,7 @@ import { msgPageNotFound1, msgPageNotFound2 } from '../../vars/messages';
 
 import './index.css';
 
-const NoRoute = () => {
+const PageNotFound = () => {
   useBackground('bg-pagenotfound');
 
   const history = useHistory();
@@ -32,4 +32,4 @@ const NoRoute = () => {
   );
 };
 
-export default NoRoute;
+export default PageNotFound;

@@ -68,11 +68,15 @@
   flex-wrap: wrap;
   width: 100%;
   min-width: 180px;
-  height: auto;
+  height: 100%;
   border-radius: var(--border-radius);
   margin: 1em 0 0 0;
   padding: 1em 1em;
   background-color: var(--light-blue-transparent);
+}
+
+.suggestions-container-hidden {
+  display: none;
 }
 
 .category-title {
@@ -112,7 +116,7 @@
   text-align: center;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 500px) {
   .suggestion-img-container {
     max-width: 40%;
   }
@@ -144,7 +148,7 @@
 
 @media screen and (min-width: 900px) {
   .suggestion-img-container {
-    max-width: 32%;
+    max-width: 30%;
   }
 }
 
