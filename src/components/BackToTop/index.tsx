@@ -16,7 +16,7 @@ const BackToTop = ({ btnStyle }: BackToTopProps) => {
   const updateState = () => {
     if (
       window.innerHeight + window.pageYOffset >=
-      document.body.offsetHeight / 0.75
+      document.body.offsetHeight / 0.5
     ) {
       window.setTimeout(function () {
         setBackToTopActive(true);
@@ -42,7 +42,7 @@ const BackToTop = ({ btnStyle }: BackToTopProps) => {
 
   return backToTopActive ? (
     <button className={btnStyle} onClick={clickHandler}>
-      &#8679;
+      &#8593;
     </button>
   ) : null;
 };

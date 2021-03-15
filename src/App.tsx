@@ -9,6 +9,7 @@ import Generator from './views/Generator';
 import NoRoute from './views/NoRoute';
 
 import Error from './components/Error';
+import BackToTop from './components/BackToTop';
 
 import ErrorObject from './types/ErrorObject';
 
@@ -43,7 +44,7 @@ const App = () => {
             <NoRoute />
           </Route>
         </Switch>
-        {/* <BackToTop btnStyle="back-to-top" /> */}
+        <BackToTop btnStyle="back-to-top" />
       </div>
     </ErrorContext.Provider>
   );
