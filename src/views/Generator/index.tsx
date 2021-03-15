@@ -63,7 +63,6 @@ const Generator = () => {
 
     try {
       validateInput(category, amount);
-      setError({ message: null });
     } catch (e) {
       setError({ message: e.message, severity: errorSeverity.notice });
       return;
@@ -76,7 +75,6 @@ const Generator = () => {
     let response;
     try {
       response = await apiRequest(url.href);
-      setError({ message: null });
     } catch (e) {
       setError({ message: e.message, severity: errorSeverity.critical });
       return;
@@ -104,7 +102,6 @@ const Generator = () => {
     categorySelectRef.current.select.clearValue();
     amountSelectRef.current.select.clearValue();
     setSuggestionList([]);
-    setError({ message: null });
   };
 
   useBackground('bg-generator');
@@ -117,7 +114,6 @@ const Generator = () => {
       try {
         response = await apiRequest(url.href);
         setCategories(response.data);
-        setError({ message: null });
       } catch (e) {
         setError({ message: e.message, severity: errorSeverity.critical });
       }

@@ -1,13 +1,13 @@
 import React, { MouseEventHandler } from 'react';
 
+import './index.css';
+
 type ButtonProps = {
   id: string;
   label: string;
   btnStyle: string;
   clickHandler?: MouseEventHandler<HTMLButtonElement>;
 };
-
-import './index.css';
 
 const Button = ({ id, label, btnStyle, clickHandler }: ButtonProps) => {
   return (
