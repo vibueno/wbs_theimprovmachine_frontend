@@ -16,8 +16,6 @@ import CategorySelectorProps from '../../types/CategorySelectorProps';
 import CategorySelectOption from '../../types/CategorySelectOption';
 import AmountSelectOption from '../../types/AmountSelectOption';
 
-import './index.css';
-
 const CategorySelector = React.forwardRef(
   (
     {

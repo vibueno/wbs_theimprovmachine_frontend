@@ -102,12 +102,14 @@ h3 {
 
 .btn-forth {
   background-color: var(--btn-color-forth);
+  color: var(--white);
 }
 
 .btn-back {
   min-height: 35px;
   background-color: var(--btn-color-back);
   font-size: 0.9em;
+  color: var(--white);
 }
 
 .back-to-top {
