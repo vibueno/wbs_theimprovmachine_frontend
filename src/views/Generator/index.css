@@ -79,17 +79,6 @@
   display: none;
 }
 
-.category-title {
-  width: 100%;
-  border-radius: var(--border-radius);
-  margin: 0 0 1em 0;
-  background-color: #d7f2f5;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.5em;
-  color: var(--darkest-blue);
-}
-
 .suggestion-img-container {
   display: flex;
   flex-direction: column;
@@ -110,7 +99,7 @@
   width: 100%;
   padding: 0.5em;
   margin: 0 0 0.5em 0;
-  background-color: #d7f2f5;
+  background-color: var(--lightest-blue);
   border-radius: var(--border-radius);
   color: var(--dark-blue);
   text-align: center;

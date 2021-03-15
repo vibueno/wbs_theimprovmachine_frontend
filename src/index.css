@@ -7,6 +7,7 @@ increased with media queries for bigger screens
   --btn-color-forth: #010514;
   --btn-color-back: #8b9db0;
   --white: #fff;
+  --lightest-blue: #d7f2f5;
   --light-blue: #8ad4fe;
   --light-blue-transparent: rgba(198, 245, 253, 0.7);
   --light-blue-transparent2: rgba(198, 245, 253, 0.3);
@@ -100,6 +101,18 @@ h3 {
   color: var(--white);
 }
 
+h4 {
+  width: 100%;
+  border-radius: var(--border-radius);
+  margin: 0 0 1em 0;
+  border: 1px solid var(--darkest-blue);
+  background-color: var(--lightest-blue);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.15em;
+  color: var(--darkest-blue);
+}
+
 .btn-forth {
   background-color: var(--btn-color-forth);
   color: var(--white);
@@ -179,6 +192,10 @@ h3 {
 
   h3 {
     font-size: 3em;
+  }
+
+  h4 {
+    font-size: 1.75em;
   }
 }
 
