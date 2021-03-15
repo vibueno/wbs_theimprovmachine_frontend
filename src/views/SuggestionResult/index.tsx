@@ -6,8 +6,6 @@ import SuggestionTextList from '../../components/SuggestionTextList';
 import { categoryContentType } from '../../vars/constants';
 
 const SuggestionResult = ({ suggestion }: []) => {
-  console.log(suggestion);
-
   if (suggestion.contenttype === categoryContentType.image) {
     return (
       <SuggestionPictureList

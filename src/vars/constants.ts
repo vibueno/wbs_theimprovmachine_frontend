@@ -1,4 +1,4 @@
-const maxSuggestionAmount = 5;
+const maxSuggestionAmount = 10;
 
 const categoryContentType = {
   image: 'image',
