@@ -30,8 +30,8 @@ const Generator = () => {
   const [categories, setCategories] = useState<SuggestionCategory[]>([]);
   const [suggestionList, setSuggestionList] = useState<SuggestionList[]>([]);
 
-  const categorySelectRef = useRef(null);
-  const amountSelectRef = useRef(null);
+  const categorySelectRef = useRef();
+  const amountSelectRef = useRef();
   const ref = { categorySelectRef, amountSelectRef };
 
   const onSubmitHandler = async (
@@ -65,7 +65,7 @@ const Generator = () => {
       response.data.suggestions
     );
 
-    setSuggestionList([...suggestionList, suggestion]);
+    setSuggestionList([suggestion, ...suggestionList]);
   };
 
   const onResetHandler = (
