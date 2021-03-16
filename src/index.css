@@ -37,6 +37,10 @@ increased with media queries for bigger screens
   outline: none;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 #root {
   width: 100%;
 }
@@ -146,8 +150,31 @@ h4 {
   color: var(--white);
 }
 
-.hidden {
-  display: none;
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(+100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @media screen and (min-width: 300px) {

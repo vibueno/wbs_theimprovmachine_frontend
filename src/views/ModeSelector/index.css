@@ -42,6 +42,14 @@
   text-align: center;
 }
 
+.slide-from-left {
+  animation: 1s ease-in-out 0s 1 slideInFromLeft;
+}
+
+.slide-from-right {
+  animation: 1s ease-in-out 0s 1 slideInFromRight;
+}
+
 .card-text-container {
   display: flex;
   flex-direction: row;
