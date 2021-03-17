@@ -6,11 +6,11 @@ import Spinner from '../Spinner';
 import SuggestionPictureListProps from '../../types/SuggestionPictureListProps';
 
 const SuggestionPictureList = ({
-  category,
-  pictureList
+  categoryTitle,
+  suggestionList
 }: SuggestionPictureListProps) => {
-  const [picsLoading, setPicsLoading] = useState([]);
-  const [allPicsLoaded, setAllPicsLoaded] = useState(false);
+  const [picsLoading, setPicsLoading] = useState<boolean[]>([]);
+  const [allPicsLoaded, setAllPicsLoaded] = useState<boolean>(false);
 
   useEffect(() => {
     setAllPicsLoaded(
@@ -18,7 +18,7 @@ const SuggestionPictureList = ({
     );
   }, [picsLoading]);
 
-  const onLoadHandler = (id, loading) => {
+  const onLoadHandler = (id: number, loading: boolean) => {
     picsLoading[id] = loading;
     setPicsLoading([...picsLoading]);
   };
@@ -32,8 +32,8 @@ const SuggestionPictureList = ({
     <>
       {!allPicsLoaded ? <Spinner /> : null}
       <div className={`${getContainerClass(allPicsLoaded)}`}>
-        <h4>{category}</h4>
-        {pictureList.map((picture, index) => (
+        <h4>{categoryTitle}</h4>
+        {suggestionList.map((picture, index) => (
           <SuggestionPicture
             id={index}
             key={index}

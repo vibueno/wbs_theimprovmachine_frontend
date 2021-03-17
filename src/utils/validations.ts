@@ -15,7 +15,7 @@ const validateGeneratorInput = (category: string, amount: number) => {
   if (amount > maxSuggestionAmount)
     throw new MaxSuggestionAmountError(
       fillInStrTemplate(msgMaxSuggestionAmount, [
-        { param: 'amount', value: maxSuggestionAmount }
+        { param: 'amount', value: maxSuggestionAmount.toString() }
       ])
     );
 };

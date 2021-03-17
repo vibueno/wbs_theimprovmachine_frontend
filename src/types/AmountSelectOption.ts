@@ -1,3 +1,3 @@
-type AmountSelectOption = { value: number; label: string };
+type AmountSelectOption = { value: number | undefined; label: string };
 
 export default AmountSelectOption;

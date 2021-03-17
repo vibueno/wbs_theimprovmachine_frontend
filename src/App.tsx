@@ -11,6 +11,7 @@ import NoRoute from './views/NoRoute';
 import Error from './components/Error';
 import BackToTop from './components/BackToTop';
 
+import ErrorContextType from './types/ErrorContextType';
 import ErrorObject from './types/ErrorObject';
 
 // Dotenv set-up
@@ -21,13 +22,13 @@ const App = () => {
     dotenv.config();
   }, []);
 
-  const [error, setError] = useState<ErrorObject>();
-  const errorValue = { error, setError };
+  const [error, setError] = useState<ErrorObject>({ message: '' });
+  const errorValue: ErrorContextType = { error, setError };
 
   return (
     <ErrorContext.Provider value={errorValue}>
       <div className="App">
-        {error ? (
+        {error.message !== '' ? (
           <Error message={error.message} severity={error.severity} />
         ) : null}
         <Switch>

@@ -10,7 +10,7 @@ const Error = ({ message, severity }: ErrorObject) => {
   const { setError } = useContext(ErrorContext);
 
   useEffect(() => {
-    setTimeout(() => setError(), 5000);
+    setTimeout(() => setError({ message: '' }), 5000);
   }, []);
 
   return <div className={`error-container ${severity}`}>{message}</div>;

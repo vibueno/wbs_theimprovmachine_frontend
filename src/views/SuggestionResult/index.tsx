@@ -3,21 +3,26 @@ import React from 'react';
 import SuggestionPictureList from '../../components/SuggestionPictureList';
 import SuggestionTextList from '../../components/SuggestionTextList';
 
+import SuggestionResultProps from '../../types/SuggestionResultProps';
+
+import SuggestionPictureProps from '../../types/SuggestionPictureProps';
+import GenericStringObject from '../../types/GenericStringObject';
+
 import { categoryContentType } from '../../vars/constants';
 
-const SuggestionResult = ({ suggestion }: []) => {
-  if (suggestion.contenttype === categoryContentType.image) {
+const SuggestionResult = ({ suggestionList }: SuggestionResultProps) => {
+  if (suggestionList.categoryContentType === categoryContentType.image) {
     return (
       <SuggestionPictureList
-        category={suggestion.category}
-        pictureList={suggestion.suggestions}
+        categoryTitle={suggestionList.categoryTitle}
+        suggestionList={suggestionList.suggestions as SuggestionPictureProps[]}
       />
     );
-  } else if (suggestion.contenttype === categoryContentType.text) {
+  } else {
     return (
       <SuggestionTextList
-        category={suggestion.category}
-        textList={suggestion.suggestions}
+        categoryTitle={suggestionList.categoryTitle}
+        suggestionList={suggestionList.suggestions as GenericStringObject[]}
       />
     );
   }

@@ -2,13 +2,13 @@ import React from 'react';
 
 import SuggestionResult from '../../views/SuggestionResult';
 
-import SuggestionList from '../../types/SuggestionList';
+import GeneratorResultsProps from '../../types/GeneratorResultsProps';
 
-const GeneratorResults = ({ suggestionList }: SuggestionList) => {
+const GeneratorResults = ({ suggestionLists }: GeneratorResultsProps) => {
   return (
     <>
-      {suggestionList.map((suggestion, index) => (
-        <SuggestionResult key={index} suggestion={suggestion} />
+      {suggestionLists.map((suggestionList, index) => (
+        <SuggestionResult key={index} suggestionList={suggestionList} />
       ))}
     </>
   );

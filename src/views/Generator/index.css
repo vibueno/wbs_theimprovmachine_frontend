@@ -1,6 +1,7 @@
 .bg-generator {
   background: url('../../assets/img/generator/500w.jpg') no-repeat center center
     fixed;
+
   background-size: cover;
 }
 

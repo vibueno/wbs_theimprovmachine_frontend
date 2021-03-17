@@ -1,8 +1,8 @@
 import SuggestionPictureProps from './SuggestionPictureProps';
 
 type SuggestionPictureListProps = {
-  category: string;
-  pictureList: SuggestionPictureProps[];
+  categoryTitle: string;
+  suggestionList: SuggestionPictureProps[];
 };
 
 export default SuggestionPictureListProps;

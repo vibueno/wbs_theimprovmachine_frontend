@@ -1,5 +1,5 @@
 import SuggestionCategory from '../types/SuggestionCategory';
-import SuggestionGeneric from '../types/SuggestionGeneric';
+import GenericStringObject from '../types/GenericStringObject';
 import SuggestionList from '../types/SuggestionList';
 
 const mapCategoriesforSelector = (
@@ -25,14 +25,14 @@ const getSuggestionAmountList = (amount: number) => {
 
 const createSuggestionObject = (
   categoryObject: SuggestionCategory,
-  suggestions: SuggestionGeneric[]
+  suggestions: GenericStringObject[]
 ): SuggestionList => {
-  const suggestion = {
-    category: categoryObject.title,
-    contenttype: categoryObject.contenttype,
+  const suggestionList = {
+    categoryTitle: categoryObject.title,
+    categoryContentType: categoryObject.contenttype,
     suggestions: suggestions
   };
-  return suggestion;
+  return suggestionList;
 };
 
 export {

@@ -3,11 +3,11 @@ import React, { MouseEventHandler } from 'react';
 import Button from '../../components/Button';
 
 type SelectorCardProps = {
-  content: string,
-  btnId: string,
-  btnLabel: string,
-  style: string,
-  clickHandler: MouseEventHandler<HTMLButtonElement>
+  content: string;
+  btnId: string;
+  btnLabel: string;
+  style: string;
+  clickHandler: MouseEventHandler<HTMLButtonElement>;
 };
 
 const SelectorCard = ({

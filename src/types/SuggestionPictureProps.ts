@@ -5,7 +5,7 @@ type SuggestionPictureProps = {
   imagepage?: string;
   authorname?: string;
   authorpage?: string;
-  onLoadHandler: () => {};
+  onLoadHandler: (id: number, loading: boolean) => void;
 };
 
 export default SuggestionPictureProps;

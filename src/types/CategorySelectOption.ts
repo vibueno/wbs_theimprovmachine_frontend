@@ -1,3 +1,3 @@
-type CategorySelectOption = { value: string; label: string };
+type CategorySelectOption = { value: string | undefined; label: string };
 
 export default CategorySelectOption;
