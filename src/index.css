@@ -1,7 +1,27 @@
+/*
+Sizes in all stylesheets are optimized for small devices and then
+increased with media queries for bigger screens
+ */
+
 :root {
   --btn-color-forth: #010514;
   --btn-color-back: #8b9db0;
   --white: #fff;
+  --light-blue: #8ad4fe;
+  --light-blue-transparent: rgba(198, 245, 253, 0.7);
+  --light-blue-transparent2: rgba(198, 245, 253, 0.3);
+  --blue: #01278a;
+  --blue-outline: #0086ff;
+  --dark-blue: #001234;
+  --darkest-blue: #01030b;
+  --light-grey: #cccccc;
+  --dark-grey: #868686;
+
+  /* Errors */
+  --critical-error: #e50000;
+  --notice-error: #2aab24;
+
+  --border-radius: 5px;
 }
 
 * {
@@ -11,15 +31,21 @@
   scroll-behavior: smooth;
 }
 
+*:focus {
+  outline: none;
+}
+
 #root {
   width: 100%;
 }
 
-body {
+.App {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  height: 100vh;
   padding: 30px 15px;
+  font-family: cairo-regular, sans-serif;
   color: var(--white);
 }
 
@@ -42,10 +68,11 @@ h1 {
   width: 100%;
   max-width: 1300px;
   margin: 0 0 0.15em 0;
-  font-size: 2.25em;
+  font-size: 2em;
   font-family: Nebula-Regular, sans-serif;
   text-align: center;
-  text-shadow: -3px 0 #01278a, 0 3px #01278a, 3px 0 #01278a, 0 -3px #8ad4fe;
+  text-shadow: -3px 0 var(--blue), 0 3px var(--blue), 3px 0 var(--blue),
+    0 -3px var(--light-blue);
 }
 
 h2 {
@@ -53,9 +80,11 @@ h2 {
   max-width: 1100px;
   margin: 0 0 1em 0;
   font-size: 1.3em;
-  font-family: Nebula-Hollow, sans-serif;
+  font-family: Nebula-Regular, sans-serif;
   text-align: center;
-  text-shadow: 1px 1px 0 #010514;
+  text-shadow: -1px -1px 0 var(--white), 1px -1px 0 var(--white),
+    -1px 1px 0 var(--white), 1px 1px 0 var(--white);
+  color: var(--dark-blue);
 }
 
 h3 {
@@ -66,6 +95,9 @@ h3 {
   font-family: Nebula-Regular;
   font-size: 1.5em;
   text-align: center;
+  text-shadow: -1px -1px 0 var(--dark-blue), 1px -1px 0 var(--dark-blue),
+    -1px 1px 0 var(--dark-blue), 1px 1px 0 var(--dark-blue);
+  color: var(--white);
 }
 
 .btn-forth {
@@ -73,7 +105,6 @@ h3 {
 }
 
 .btn-back {
-  min-width: 45px;
   min-height: 35px;
   background-color: var(--btn-color-back);
   font-size: 0.9em;
@@ -99,7 +130,7 @@ h3 {
 
 @media screen and (min-width: 300px) {
   h1 {
-    font-size: 3em;
+    font-size: 2.75em;
   }
 
   h2 {
@@ -113,11 +144,21 @@ h3 {
 
 @media screen and (min-width: 400px) {
   h1 {
-    font-size: 4em;
+    font-size: 3.5em;
   }
 
   h2 {
-    font-size: 1.25em;
+    font-size: 2.25em;
+    text-shadow: -2px -2px 0 var(--white), 2px -2px 0 var(--white),
+      -2px 2px 0 var(--white), 2px 2px 0 var(--white);
+    color: var(--dark-blue);
+  }
+
+  h3 {
+    font-size: 2.25em;
+    text-shadow: -2px -2px 0 var(--dark-blue), 2px -2px 0 var(--dark-blue),
+      -2px 2px 0 var(--dark-blue), 2px 2px 0 var(--dark-blue);
+    color: var(--white);
   }
 }
 
@@ -127,7 +168,7 @@ h3 {
   }
 
   h2 {
-    font-size: 3em;
+    font-size: 2.75em;
   }
 
   h3 {
@@ -141,7 +182,7 @@ h3 {
   }
 
   h2 {
-    font-size: 2.75em;
+    font-size: 3em;
   }
 
   h3 {

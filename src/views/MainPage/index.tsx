@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import Button from '../../components/Button';
+import useBackground from '../../hooks/useBackground';
 
-import { setBackground } from '../../utils/background';
+import Button from '../../components/Button';
 
 import { ctntAppTitle, ctntAppSubtitle } from '../../vars/content';
 
@@ -13,9 +13,7 @@ const MainPage = () => {
   const history = useHistory();
   const onClickHandler = () => history.push('modeselector');
 
-  useEffect(() => {
-    setBackground('bg-main-page');
-  }, []);
+  useBackground('bg-main-page');
 
   return (
     <>

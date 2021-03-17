@@ -1,17 +1,29 @@
 import axios from 'axios';
-import { APIAccessError } from '../utils/error';
-import { msgAPIError } from '../vars/messages';
+import { BackendError, ApiError } from '../utils/error';
+import { msgBackendError, msgAPIError } from '../vars/messages';
 
 import { fillInStrTemplate } from '../utils/strtemplate';
 
 const apiRequest = async (url: string) => {
+  let response;
   try {
-    const response = await axios.get(url);
+    response = await axios.get(url);
     return response.data;
   } catch (e) {
-    throw new APIAccessError(
-      fillInStrTemplate(msgAPIError, [{ param: 'error', value: e.message }])
-    );
+    if (e.response) {
+      throw new ApiError(
+        fillInStrTemplate(msgAPIError, [
+          { param: 'errorCode', value: e.response.data.status },
+          { param: 'errorMsg', value: e.response.data.message }
+        ])
+      );
+    } else {
+      throw new BackendError(
+        fillInStrTemplate(msgBackendError, [
+          { param: 'errorMsg', value: e.message }
+        ])
+      );
+    }
   }
 };
 

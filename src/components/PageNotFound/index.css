@@ -1,0 +1,77 @@
+.bg-pagenotfound {
+  height: 100vh;
+  background: url('../../assets/img/pagenotfound/500w.jpg') no-repeat center
+    center fixed;
+  background-size: cover;
+}
+
+.page-not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.page-not-found-text {
+  margin: 0 0 0.5em 0;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.btn-pagenotfound {
+  margin: 0.25em 0 0 0;
+  font-size: 0.8em;
+}
+
+@media screen and ((min-width: 450px) or (min-height: 270px)) {
+  .bg-pagenotfound {
+    background: url('../../assets/img/pagenotfound/1000w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 950px) or (min-height: 500px)) {
+  .bg-pagenotfound {
+    background: url('../../assets/img/pagenotfound/2000w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 1950px) or (min-height: 1100px)) {
+  .bg-pagenotfound {
+    background: url('../../assets/img/pagenotfound/3000w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 2950px) or (min-height: 1600px)) {
+  .bg-pagenotfound {
+    background: url('../../assets/img/pagenotfound/3840w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  .page-not-found-text {
+    font-size: 1.75em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .page-not-found-text {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .page-not-found-text {
+    font-size: 3em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .page-not-found-text {
+    font-size: 3.5em;
+  }
+}

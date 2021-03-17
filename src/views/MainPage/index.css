@@ -1,10 +1,6 @@
-/*
-Sizes are optimized for small devices and then
-increased with media queries for bigger screens
- */
-
 .bg-main-page {
-  background: url('../../assets/img/mainpage.jpg') no-repeat center center fixed;
+  background: url('../../assets/img/mainpage/500w.jpg') no-repeat center center
+    fixed;
   background-size: cover;
 }
 
@@ -13,7 +9,7 @@ increased with media queries for bigger screens
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2em;
+  padding: 0.5em;
   width: 100%;
   height: 100%;
   min-height: 80vh;
@@ -54,5 +50,61 @@ increased with media queries for bigger screens
 @media screen and (min-width: 800px) {
   .btn-enter {
     font-size: 3em;
+  }
+}
+
+@media screen and ((min-width: 450px) or (min-height: 300px)) {
+  .bg-main-page {
+    background: url('../../assets/img/mainpage/750w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 700px) or (min-height: 500px)) {
+  .bg-main-page {
+    background: url('../../assets/img/mainpage/1000w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 950px) or (min-height: 650px)) {
+  .bg-main-page {
+    background: url('../../assets/img/mainpage/1250w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 1200px) or (min-height: 850px)) {
+  .bg-main-page {
+    background: url('../../assets/img/mainpage/1500w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 1450px) or (min-height: 1000px)) {
+  .bg-main-page {
+    background: url('../../assets/img/mainpage/2000w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 1950px) or (min-height: 1350px)) {
+  .bg-main-page {
+    background: url('../../assets/img/mainpage/2500w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 2450px) or (min-height: 1700px)) {
+  .bg-main-page {
+    background: url('../../assets/img/mainpage/3000w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 2950px) or (min-height: 2000px)) {
+  .bg-main-page {
+    background: url('../../assets/img/mainpage/3840w.jpg') no-repeat center
+      center fixed;
   }
 }

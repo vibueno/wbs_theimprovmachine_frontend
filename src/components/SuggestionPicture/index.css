@@ -1,20 +1,26 @@
-.suggestion-img {
-  display: block;
-  filter: contrast(0.6);
-  min-width: 150px;
+.suggestion-img-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 125px;
   max-width: 100%;
   height: auto;
   margin: 1em 1em;
 }
 
+.suggestion-img {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 0 1em 0;
+}
+
 @media screen and (min-width: 600px) {
-  .suggestion-img {
+  .suggestion-img-container {
     max-width: 40%;
   }
 }
 
 @media screen and (min-width: 900px) {
-  .suggestion-img {
+  .suggestion-img-container {
     max-width: 32%;
   }
 }

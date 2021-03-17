@@ -1,17 +1,17 @@
-import React, { MouseEvent, useEffect } from 'react';
+import React, { MouseEvent } from 'react';
 import { useHistory } from 'react-router-dom';
 
+import useBackground from '../../hooks/useBackground';
+
+import SelectorCard from '../../components/SelectorCard';
 import Button from '../../components/Button';
 
-import { setBackground } from '../../utils/background';
 import { ctntModeSelectorGen, ctntModeSelectorGames } from '../../vars/content';
 
 import './index.css';
 
 const ModeSelector = () => {
-  useEffect(() => {
-    setBackground('bg-mode-selector');
-  }, []);
+  useBackground('bg-mode-selector');
 
   const history = useHistory();
 
@@ -36,33 +36,18 @@ const ModeSelector = () => {
       <div className="selectors-container">
         <div className="selector-container">
           <div className="cards-container">
-            <section className="card">
-              <div className="card-text-container">
-                <p className="card-text">{ctntModeSelectorGen}</p>
-              </div>
-              <div className="card-btn-container">
-                <Button
-                  id="btn-mode-generator"
-                  label="Generator"
-                  btnStyle="btn-forth card-btn"
-                  clickHandler={onClickHandler}
-                />
-              </div>
-            </section>
-
-            <section className="card">
-              <div className="card-text-container">
-                <p className="card-text">{ctntModeSelectorGames}</p>
-              </div>
-              <div className="card-btn-container">
-                <Button
-                  id="btn-mode-games"
-                  label="Games"
-                  btnStyle="btn-forth card-btn"
-                  clickHandler={onClickHandler}
-                />
-              </div>
-            </section>
+            <SelectorCard
+              content={ctntModeSelectorGen}
+              btnId="btn-mode-generator"
+              btnLabel="Generator"
+              clickHandler={onClickHandler}
+            />
+            <SelectorCard
+              content={ctntModeSelectorGames}
+              btnId="btn-mode-games"
+              btnLabel="Games"
+              clickHandler={onClickHandler}
+            />
           </div>
 
           <div className="btn-back-container">

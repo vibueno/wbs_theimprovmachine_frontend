@@ -1,25 +1,10 @@
-.suggestion-texts-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 90%;
-  height: auto;
-  min-width: 180px;
-  max-width: 1300px;
-  border-radius: 5px;
-  margin: 1em 0 0 0;
-  padding: 1em 1em;
-  background-color: rgba(198, 245, 253, 0.7);
-}
-
 .suggestion-text {
   display: block;
   width: 100%;
   padding: 0.5em;
   margin: 0 0 0.5em 0;
-  background-color: #9fd1f5;
-  color: #012166;
+  background-color: #d7f2f5;
+  border-radius: var(--border-radius);
+  color: var(--dark-blue);
   text-align: center;
 }

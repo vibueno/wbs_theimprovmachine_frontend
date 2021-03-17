@@ -1,14 +1,86 @@
 .bg-generator {
-  background: url('../../assets/img/generator.jpg') no-repeat center center
+  background: url('../../assets/img/generator/500w.jpg') no-repeat center center
     fixed;
   background-size: cover;
 }
 
 .generator-container {
   display: flex;
+  justify-self: flex-start;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding: 1em 0;
+  width: 90%;
+  max-width: 1300px;
+}
+
+.suggestions-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
+  min-width: 180px;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin: 1em 0 0 0;
+  padding: 1em 1em;
+  background-color: var(--light-blue-transparent);
+}
+
+@media screen and ((min-width: 450px) or (min-height: 300px)) {
+  .bg-generator {
+    background: url('../../assets/img/generator/750w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 700px) or (min-height: 500px)) {
+  .bg-generator {
+    background: url('../../assets/img/generator/1000w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 950px) or (min-height: 650px)) {
+  .bg-generator {
+    background: url('../../assets/img/generator/1250w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 1200px) or (min-height: 850px)) {
+  .bg-generator {
+    background: url('../../assets/img/generator/1500w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 1450px) or (min-height: 1000px)) {
+  .bg-generator {
+    background: url('../../assets/img/generator/2000w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 1950px) or (min-height: 1350px)) {
+  .bg-generator {
+    background: url('../../assets/img/generator/2500w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 2450px) or (min-height: 1700px)) {
+  .bg-generator {
+    background: url('../../assets/img/generator/3000w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 2950px) or (min-height: 2000px)) {
+  .bg-generator {
+    background: url('../../assets/img/generator/3840w.jpg') no-repeat center
+      center fixed;
+  }
 }

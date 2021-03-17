@@ -1,12 +1,7 @@
-/*
-Sizes are optimized for small devices and then
-increased with media queries for bigger screens
- */
-
 .bg-mode-selector {
   height: 100vh;
-  background: url('../../assets/img/modeselector.jpg') no-repeat center center
-    fixed;
+  background: url('../../assets/img/modeselector/500w.jpg') no-repeat center
+    center fixed;
   background-size: cover;
 }
 
@@ -43,7 +38,7 @@ increased with media queries for bigger screens
   min-width: 200px;
   max-width: 1000px;
   padding: 1em;
-  background-color: rgba(198, 245, 253, 0.3);
+  background-color: var(--light-blue-transparent2);
   text-align: center;
 }
 
@@ -73,8 +68,8 @@ increased with media queries for bigger screens
 
 .card-text {
   font-size: 1.2em;
-  font-family: cairo-regular, sans-serif;
   text-align: center;
+  color: var(--darkest-blue);
 }
 
 .btn-back-container {
@@ -153,5 +148,61 @@ increased with media queries for bigger screens
 
   .card-btn {
     font-size: 2.75em;
+  }
+}
+
+@media screen and ((min-width: 450px) or (min-height: 300px)) {
+  .bg-mode-selector {
+    background: url('../../assets/img/modeselector/750w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 700px) or (min-height: 500px)) {
+  .bg-mode-selector {
+    background: url('../../assets/img/modeselector/1000w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 950px) or (min-height: 650px)) {
+  .bg-mode-selector {
+    background: url('../../assets/img/modeselector/1250w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 1200px) or (min-height: 850px)) {
+  .bg-mode-selector {
+    background: url('../../assets/img/modeselector/1500w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 1450px) or (min-height: 1000px)) {
+  .bg-mode-selector {
+    background: url('../../assets/img/modeselector/2000w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 1950px) or (min-height: 1350px)) {
+  .bg-mode-selector {
+    background: url('../../assets/img/modeselector/2500w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 2450px) or (min-height: 1700px)) {
+  .bg-mode-selector {
+    background: url('../../assets/img/modeselector/3000w.jpg') no-repeat center
+      center fixed;
+  }
+}
+
+@media screen and ((min-width: 2950px) or (min-height: 2000px)) {
+  .bg-mode-selector {
+    background: url('../../assets/img/modeselector/3840w.jpg') no-repeat center
+      center fixed;
   }
 }
