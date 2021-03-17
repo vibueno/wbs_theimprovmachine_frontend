@@ -2,26 +2,6 @@
   "name": "wbs_theimprovmachine_frontend",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.7.3",
-    "@types/jest": "^26.0.20",
-    "@types/node": "^12.20.4",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
-    "axios": "^0.21.1",
-    "dotenv": "^8.2.0",
-    "path": "^0.12.7",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "react-select": "^4.2.1",
-    "typescript": "^4.2.2",
-    "web-vitals": "^1.1.0"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -86,10 +66,19 @@
     "@typescript-eslint/eslint-plugin": "^4.16.1",
     "@typescript-eslint/parser": "^4.16.1",
     "eslint": "^7.21.0",
-    "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-react": "^7.22.0"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "eslint-config-standard": "^16.0.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "react-select": "^4.2.1",
+    "typescript": "^4.2.3"
   }
 }
