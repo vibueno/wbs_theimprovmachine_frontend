@@ -1,0 +1,13 @@
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-width: 180px;
+  height: 100%;
+  border-radius: var(--border-radius-light);
+  margin: 1em 0 0 0;
+  padding: 1em 1em;
+  background-color: var(--light-blue-transparent);
+}

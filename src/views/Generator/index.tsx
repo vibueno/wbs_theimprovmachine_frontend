@@ -4,35 +4,23 @@ import { ErrorContext } from '../../vars/context';
 
 import useBackground from '../../hooks/useBackground';
 
-import {
-  mapCategoriesforSelector,
-  getSuggestionAmountList
-} from '../../utils/suggestioncategories';
+import GeneratorResults from '../../views/GeneratorResults';
+import CategorySelector from '../../components/CategorySelector';
 
-import { fillInStrTemplate } from '../../utils/strtemplate';
+import { maxSuggestionAmount, errorSeverity } from '../../vars/constants';
+
+import SuggestionCategory from '../../types/SuggestionCategory';
+import SuggestionList from '../../types/SuggestionList';
 
 import apiRequest from '../../utils/api';
 
-import CategorySelector from '../../components/CategorySelector';
-import SuggestionPictures from '../../views/SuggestionPictures';
-import SuggestionTexts from '../../views/SuggestionTexts';
-
-import SuggestionPictureProps from '../../types/SuggestionPictureProps';
-import SuggestionTextProps from '../../types/SuggestionTextProps';
-import SuggestionCategory from '../../types/SuggestionCategory';
+import { validateGeneratorInput } from '../../utils/validations';
 
 import {
-  categoryContentType,
-  maxSuggestionAmount,
-  errorSeverity
-} from '../../vars/constants';
-
-import { msgRequiredField, msgMaxSuggestionAmount } from '../../vars/messages';
-
-import {
-  RequiredFieldError,
-  MaxSuggestionAmountError
-} from '../../utils/error';
+  mapCategoriesforSelector,
+  getSuggestionAmountList,
+  createSuggestionObject
+} from '../../utils/suggestion';
 
 import './index.css';
 
@@ -40,27 +28,11 @@ const Generator = () => {
   const { setError } = useContext(ErrorContext);
 
   const [categories, setCategories] = useState<SuggestionCategory[]>([]);
-  const [pictureList, setPictureList] = useState<SuggestionPictureProps[]>([]);
-  const [textList, setTextList] = useState<SuggestionTextProps[]>([]);
+  const [suggestionList, setSuggestionList] = useState<SuggestionList[]>([]);
 
-  const categorySelectRef = useRef(null);
-  const amountSelectRef = useRef(null);
+  const categorySelectRef = useRef();
+  const amountSelectRef = useRef();
   const ref = { categorySelectRef, amountSelectRef };
-
-  const validateInput = (category: string, amount: number) => {
-    if (!category || !amount)
-      throw new RequiredFieldError(
-        fillInStrTemplate(msgRequiredField, [
-          { param: 'fields', value: 'category and amount' }
-        ])
-      );
-    if (amount > maxSuggestionAmount)
-      throw new MaxSuggestionAmountError(
-        fillInStrTemplate(msgMaxSuggestionAmount, [
-          { param: 'amount', value: maxSuggestionAmount }
-        ])
-      );
-  };
 
   const onSubmitHandler = async (
     e: MouseEvent,
@@ -70,8 +42,7 @@ const Generator = () => {
     e.preventDefault();
 
     try {
-      validateInput(category, amount);
-      setError({ message: null });
+      validateGeneratorInput(category, amount);
     } catch (e) {
       setError({ message: e.message, severity: errorSeverity.notice });
       return;
@@ -84,24 +55,17 @@ const Generator = () => {
     let response;
     try {
       response = await apiRequest(url.href);
-      setError({ message: null });
     } catch (e) {
       setError({ message: e.message, severity: errorSeverity.critical });
       return;
     }
 
-    const categoryObject = categories.find(cat => cat.name === category);
+    const suggestion = createSuggestionObject(
+      categories.find(cat => cat.name === category),
+      response.data.suggestions
+    );
 
-    if (categoryObject !== undefined) {
-      switch (categoryObject.contenttype) {
-        case categoryContentType.image:
-          setPictureList(response.data.suggestions);
-          break;
-
-        case categoryContentType.text:
-          setTextList(response.data.suggestions);
-      }
-    }
+    setSuggestionList([suggestion, ...suggestionList]);
   };
 
   const onResetHandler = (
@@ -115,9 +79,7 @@ const Generator = () => {
     form.reset();
     categorySelectRef.current.select.clearValue();
     amountSelectRef.current.select.clearValue();
-    setPictureList([]);
-    setTextList([]);
-    setError({ message: null });
+    setSuggestionList([]);
   };
 
   useBackground('bg-generator');
@@ -130,7 +92,6 @@ const Generator = () => {
       try {
         response = await apiRequest(url.href);
         setCategories(response.data);
-        setError({ message: null });
       } catch (e) {
         setError({ message: e.message, severity: errorSeverity.critical });
       }
@@ -149,10 +110,7 @@ const Generator = () => {
           onResetHandler={onResetHandler}
           ref={ref}
         />
-        {pictureList.length ? (
-          <SuggestionPictures pictureList={pictureList} />
-        ) : null}
-        {textList.length ? <SuggestionTexts textList={textList} /> : null}
+        <GeneratorResults suggestionList={suggestionList} />
       </div>
     </>
   );

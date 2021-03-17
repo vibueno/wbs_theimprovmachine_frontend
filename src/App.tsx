@@ -6,10 +6,10 @@ import { ErrorContext } from './vars/context';
 import MainPage from './views/MainPage';
 import ModeSelector from './views/ModeSelector';
 import Generator from './views/Generator';
-
 import NoRoute from './views/NoRoute';
 
 import Error from './components/Error';
+import BackToTop from './components/BackToTop';
 
 import ErrorObject from './types/ErrorObject';
 
@@ -21,13 +21,13 @@ const App = () => {
     dotenv.config();
   }, []);
 
-  const [error, setError] = useState<ErrorObject>({ message: null });
+  const [error, setError] = useState<ErrorObject>();
   const errorValue = { error, setError };
 
   return (
     <ErrorContext.Provider value={errorValue}>
       <div className="App">
-        {error.message ? (
+        {error ? (
           <Error message={error.message} severity={error.severity} />
         ) : null}
         <Switch>
@@ -44,7 +44,7 @@ const App = () => {
             <NoRoute />
           </Route>
         </Switch>
-        {/* <BackToTop btnStyle="back-to-top" /> */}
+        <BackToTop btnStyle="back-to-top" />
       </div>
     </ErrorContext.Provider>
   );

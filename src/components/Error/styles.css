@@ -1,13 +1,14 @@
 .error-container {
-  display: flex;
   position: fixed;
+  display: flex;
+  animation: 1s ease-out 0s 1 slideInFromTop;
   top: 0;
   align-items: center;
   justify-content: center;
   width: 100%;
   height: auto;
   min-height: 50px;
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  border-radius: 0 0 var(--border-radius-strong) var(--border-radius-strong);
   font-size: 1.1em;
   font-weight: bold;
   text-align: center;

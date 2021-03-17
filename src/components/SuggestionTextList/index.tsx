@@ -2,12 +2,14 @@ import React from 'react';
 
 import SuggestionTextListProps from '../../types/SuggestionTextListProps';
 
-import './index.css';
-
-const SuggestionTextList = ({ textList }: SuggestionTextListProps) => {
+const SuggestionTextList = ({
+  category,
+  textList
+}: SuggestionTextListProps) => {
   return (
     <>
       <div className="suggestions-container">
+        <h4>{category}</h4>
         {textList.map((textColumn, index) => (
           <div key={index} className="suggestion-text">
             {Object.keys(textColumn).map(textItem => (

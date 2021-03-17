@@ -7,6 +7,7 @@ increased with media queries for bigger screens
   --btn-color-forth: #010514;
   --btn-color-back: #8b9db0;
   --white: #fff;
+  --lightest-blue: #d7f2f5;
   --light-blue: #8ad4fe;
   --light-blue-transparent: rgba(198, 245, 253, 0.7);
   --light-blue-transparent2: rgba(198, 245, 253, 0.3);
@@ -21,7 +22,8 @@ increased with media queries for bigger screens
   --critical-error: #e50000;
   --notice-error: #2aab24;
 
-  --border-radius: 5px;
+  --border-radius-light: 5px;
+  --border-radius-strong: 10px;
 }
 
 * {
@@ -33,6 +35,10 @@ increased with media queries for bigger screens
 
 *:focus {
   outline: none;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 #root {
@@ -100,32 +106,75 @@ h3 {
   color: var(--white);
 }
 
+h4 {
+  width: 100%;
+  border-radius: var(--border-radius-light);
+  margin: 0 0 1em 0;
+  border: 1px solid var(--darkest-blue);
+  background-color: var(--lightest-blue);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.15em;
+  color: var(--darkest-blue);
+}
+
 .btn-forth {
   background-color: var(--btn-color-forth);
+  color: var(--white);
 }
 
 .btn-back {
   min-height: 35px;
   background-color: var(--btn-color-back);
   font-size: 0.9em;
+  color: var(--white);
 }
 
 .back-to-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: fixed;
   z-index: 1;
   right: 20px;
   bottom: 20px;
-  border-width: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 45px;
   height: 45px;
-  background-color: var(--btn-color-back);
+  border: 2px solid var(--white);
+  border-radius: var(--border-radius-light);
+  box-shadow: 0px 0px 36px 3px rgba(255, 255, 255, 1);
+  background-color: #01227a;
   cursor: pointer;
   font-size: 2.5em;
   font-family: Nebula-Regular, sans-serif;
   color: var(--white);
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(+100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @media screen and (min-width: 300px) {
@@ -173,6 +222,10 @@ h3 {
 
   h3 {
     font-size: 3em;
+  }
+
+  h4 {
+    font-size: 1.75em;
   }
 }
 

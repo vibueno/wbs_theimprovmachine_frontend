@@ -4,6 +4,52 @@
   background-size: cover;
 }
 
+.category-selector-form {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  width: 100%;
+  min-width: 180px;
+  min-height: 275px;
+  padding: 2em 0.5em;
+  border-radius: var(--border-radius-light);
+  margin: 0 0 2em 0;
+  background-color: var(--light-blue-transparent);
+}
+
+.select-category {
+  flex: 40%;
+  width: 100%;
+  min-width: 155px;
+  max-width: 250px;
+  color: var(--dark-grey);
+}
+
+.select-amount {
+  flex: 15%;
+  width: 100%;
+  min-width: 115px;
+  max-width: 250px;
+  margin: 0.5em 0 1em 0;
+  color: var(--dark-grey);
+}
+
+.btn-form-submit {
+  display: flex;
+  min-width: 150px;
+  height: 45px;
+  margin: 0 0 0.5em 0;
+  font-size: 1.1em;
+}
+
+.btn-reset {
+  display: flex;
+  min-width: 150px;
+  height: 45px;
+  font-size: 1.1em;
+}
+
 .generator-container {
   display: flex;
   justify-self: flex-start;
@@ -22,11 +68,77 @@
   flex-wrap: wrap;
   width: 100%;
   min-width: 180px;
-  height: auto;
-  border-radius: var(--border-radius);
+  height: 100%;
+  border-radius: var(--border-radius-light);
   margin: 1em 0 0 0;
   padding: 1em 1em;
   background-color: var(--light-blue-transparent);
+}
+
+.suggestions-container-hidden {
+  display: none;
+}
+
+.suggestion-img-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 125px;
+  max-width: 100%;
+  height: auto;
+  margin: 1em 1em;
+}
+
+.suggestion-img {
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 0 1em 0;
+}
+
+.suggestion-text {
+  display: block;
+  width: 100%;
+  padding: 0.5em;
+  margin: 0 0 0.5em 0;
+  background-color: var(--lightest-blue);
+  border-radius: var(--border-radius-light);
+  color: var(--dark-blue);
+  text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+  .suggestion-img-container {
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .category-selector-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 150px;
+    padding: 2em 1em;
+  }
+
+  .select-amount {
+    margin: 0 3em 0 0.5em;
+    max-width: 110px;
+  }
+
+  .btn-form-submit {
+    min-width: 110px;
+    margin: 0 0.25em 0 0;
+  }
+
+  .btn-reset {
+    min-width: 80px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .suggestion-img-container {
+    width: 30%;
+  }
 }
 
 @media screen and ((min-width: 450px) or (min-height: 300px)) {
