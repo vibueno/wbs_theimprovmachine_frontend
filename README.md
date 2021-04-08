@@ -20,4 +20,4 @@ For checking the backend, go to the corresponding [Github repo](https://github.c
 
 ## Live
 
-This application will be hosted Heroku.
+For a live version of *The Improv Machine*, visit [Heroku](https://theimprovmachine.herokuapp.com).
