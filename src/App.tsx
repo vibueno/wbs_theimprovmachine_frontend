@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
+import { errorSeverity } from './vars/constants';
 import { ErrorContext } from './vars/context';
 
 import MainPage from './views/MainPage';
@@ -14,12 +15,22 @@ import BackToTop from './components/BackToTop';
 import ErrorContextType from './types/ErrorContextType';
 import ErrorObject from './types/ErrorObject';
 
+import apiRequest from './utils/api';
+
 // Dotenv set-up
 import * as dotenv from 'dotenv';
 
 const App = () => {
   useEffect(() => {
     dotenv.config();
+
+    // Wake up backend
+    try {
+      const url = new URL('categories', process.env.REACT_APP_BACKENDHOST!);
+      apiRequest(url.href);
+    } catch (e) {
+      setError({ message: e.message, severity: errorSeverity.critical });
+    }
   }, []);
 
   const [error, setError] = useState<ErrorObject>({ message: '' });
