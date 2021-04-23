@@ -3,8 +3,8 @@
 ## Table of Contents
 
 - [Description](#description)
-- [Backend](#backend)
 - [Live](#live)
+- [Backend](#backend)
 
 ## Description
 
@@ -14,10 +14,10 @@ _The Improv Machine_ is an Improv (improvisational theatre) suggestions generato
 
 If you are interested in the technical details behind this project, check the [technical doc](./public/doc/technicaldetails.md).
 
+## Live
+
+For a live version of _The Improv Machine_, visit [Heroku](https://theimprovmachine.herokuapp.com).
+
 ## Backend
 
 For checking the backend, go to the corresponding [Github repo](https://github.com/vibueno/wbs_theimprovmachine_backend).
-
-## Live
-
-For a live version of *The Improv Machine*, visit [Heroku](https://theimprovmachine.herokuapp.com).
