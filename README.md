@@ -10,9 +10,7 @@
 
 This repository contains the frontend of _The Improv Machine_: my final project for my Full-Stack Training at WBS Coding School.
 
-_The Improv Machine_ is an Improv (improvisational theatre) suggestions generator that can be used by improv actors to get scenes started. 
-
-For a more detailed description, check the [project description doc](https://github.com/vibueno/wbs_theimprovmachine_backend/blob/dev/doc/projectdescription.md).
+_The Improv Machine_ is an Improv (improvisational theatre) suggestions generator that can be used by improv actors to get scenes started. For a more detailed description, check the [project description doc](https://github.com/vibueno/wbs_theimprovmachine_backend/blob/dev/doc/projectdescription.md).
 
 If you want a visual introduction to the project, check this [video](https://www.youtube.com/watch?v=93zvJeuVrD4).
 
