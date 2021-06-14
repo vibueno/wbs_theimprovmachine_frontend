@@ -40,14 +40,12 @@ const ModeSelector = () => {
               content={ctntModeSelectorGen}
               btnId="btn-mode-generator"
               btnLabel="Generator"
-              style="slide-from-left"
               clickHandler={onClickHandler}
             />
             <SelectorCard
               content={ctntModeSelectorGames}
               btnId="btn-mode-games"
               btnLabel="Games"
-              style="slide-from-right"
               clickHandler={onClickHandler}
             />
           </div>
