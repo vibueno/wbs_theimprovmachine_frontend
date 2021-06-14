@@ -37,6 +37,11 @@ increased with media queries for bigger screens
   outline: none;
 }
 
+html,
+body {
+  min-height: 100%;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -48,11 +53,12 @@ body {
 .App {
   display: block;
   margin: auto;
-  height: 100vh;
+  min-height: 100vh;
   padding: 30px 15px;
   font-family: cairo-regular, sans-serif;
   color: var(--white);
   text-align: center;
+  /* border: 1px solid black; */
 }
 
 @font-face {
@@ -150,12 +156,13 @@ h4 {
   color: var(--white);
 }
 
-@keyframes slideInFromTop {
-  0% {
-    transform: translateY(-100%);
+@keyframes sharpen {
+  from {
+    opacity: 0;
   }
-  100% {
-    transform: translateY(0);
+
+  to {
+    opacity: 1;
   }
 }
 

@@ -1,4 +1,15 @@
 .bg-generator {
+  position: relative;
+  animation: sharpen 0.5s both;
+}
+
+.bg-generator::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
   background: no-repeat center fixed;
   background-size: cover;
 }
@@ -54,6 +65,7 @@
   padding: 1em 0;
   width: 90%;
   max-width: 1300px;
+  height: 100%;
 }
 
 .suggestions-container {
@@ -137,41 +149,41 @@
 }
 
 @media screen and (max-width: 449px), screen and (max-height: 299px) {
-  .bg-generator {
+  .bg-generator::before {
     background-image: url('../../assets/img/generator/500w.jpg');
   }
 }
 
 @media screen and (min-width: 450px) and (max-width: 949px),
   screen and (min-height: 300px) and (max-height: 499px) {
-  .bg-generator {
+  .bg-generator::before {
     background-image: url('../../assets/img/generator/1000w.jpg');
   }
 }
 
 @media screen and (min-width: 950px) and (max-width: 1449px),
   screen and (min-height: 500px) and (max-height: 999px) {
-  .bg-generator {
+  .bg-generator::before {
     background-image: url('../../assets/img/generator/1500w.jpg');
   }
 }
 
 @media screen and (min-width: 1450px) and (max-width: 1949px),
   screen and (min-height: 1000px) and (max-height: 1349px) {
-  .bg-generator {
+  .bg-generator::before {
     background-image: url('../../assets/img/generator/2000w.jpg');
   }
 }
 
 @media screen and (min-width: 1950px) and (max-width: 2449px),
   screen and (min-height: 1350px) and (max-height: 1699px) {
-  .bg-generator {
+  .bg-generator::before {
     background-image: url('../../assets/img/generator/2500w.jpg');
   }
 }
 
 @media screen and (min-width: 2450px), screen and (min-height: 1700px) {
-  .bg-generator {
+  .bg-generator::before {
     background-image: url('../../assets/img/generator/3840w.jpg');
   }
 }
