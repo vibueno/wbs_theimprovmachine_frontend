@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import SuggestionPictureProps from '../../types/SuggestionPictureProps';
 
@@ -11,10 +11,6 @@ const SuggestionPicture = ({
   authorpage,
   onLoadHandler
 }: SuggestionPictureProps) => {
-  useEffect(() => {
-    onLoadHandler(id, true);
-  }, []);
-
   return (
     <>
       <div className="suggestion-img-container">
