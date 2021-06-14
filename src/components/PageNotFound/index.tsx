@@ -10,7 +10,7 @@ import { msgPageNotFound1, msgPageNotFound2 } from '../../vars/messages';
 import './index.css';
 
 const PageNotFound = () => {
-  useBackground('bg-pagenotfound');
+  useBackground('bg-page-not-found ');
 
   const history = useHistory();
 
