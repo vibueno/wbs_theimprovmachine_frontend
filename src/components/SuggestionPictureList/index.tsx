@@ -14,7 +14,7 @@ const SuggestionPictureList = ({
 
   useEffect(() => {
     setAllPicsLoaded(
-      picsLoading.filter(picLoading => picLoading === true).length === 0
+      picsLoading.filter(picLoading => picLoading === false).length !== 0
     );
   }, [picsLoading]);
 
