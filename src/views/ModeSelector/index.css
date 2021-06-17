@@ -81,14 +81,6 @@
   color: var(--darkest-blue);
 }
 
-.btn-back-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: 1em;
-  margin: 0;
-}
-
 @media screen and (min-width: 300px) {
   .card-text {
     font-size: 1.5em;
@@ -103,19 +95,11 @@
   .card-btn {
     font-size: 1.5em;
   }
-
-  .btn-back {
-    font-size: 1em;
-  }
 }
 
 @media screen and (min-width: 600px) {
   .card-text {
     font-size: 2.25em;
-  }
-
-  .btn-back {
-    font-size: 1.5em;
   }
 
   .card-btn {
@@ -135,14 +119,6 @@
 
   .card-btn {
     font-size: 2.25em;
-  }
-
-  .btn-back-container {
-    margin: 2em 0 0 0;
-  }
-
-  .btn-back {
-    font-size: 2em;
   }
 }
 

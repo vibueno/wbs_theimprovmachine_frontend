@@ -4,7 +4,6 @@ import { useHistory } from 'react-router-dom';
 import useBackground from '../../hooks/useBackground';
 
 import SelectorCard from '../../components/SelectorCard';
-import Button from '../../components/Button';
 
 import { ctntModeSelectorGen, ctntModeSelectorGames } from '../../vars/content';
 
@@ -46,15 +45,6 @@ const ModeSelector = () => {
               content={ctntModeSelectorGames}
               btnId="btn-mode-games"
               btnLabel="Games"
-              clickHandler={onClickHandler}
-            />
-          </div>
-
-          <div className="btn-back-container">
-            <Button
-              id="btn-back"
-              label="&#9003; Back"
-              btnStyle="btn-back"
               clickHandler={onClickHandler}
             />
           </div>
